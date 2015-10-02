@@ -1,0 +1,1040 @@
+#
+#  Copyright © 2015 LiST Inc. Some Rights Reserved.
+#
+#  This work is licensed under the Creative Commons Attribution 4.0
+#  International License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+#  Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041,
+#  USA.
+#
+#  This copyright applies only to the Juso Ontology Specification and
+#  accompanying documentation in RDF or Turtle; it does not apply to data
+#  formats, ontology terms, or technology. Regarding underlying technology,
+#  Juso Ontology relies heavily on W3C's RDF technology, an open Web
+#  standard that can be freely used by anyone.
+#
+#  Most of the descriptions given here are from Wikipedia or from the related
+#  ontologies and vocabularies.
+#
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix status: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ic: <http://ontology.eil.utoronto.ca/icontact.owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix spatial: <http://geovocab.org/spatial#> .
+@prefix ngeo: <http://geovocab.org/geometry#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix lgdo: <http://linkedgeodata.org/ontology/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix juso: <http://rdfs.co/juso/> .
+
+# Ontology ####################################################################
+
+<http://rdfs.co/juso/0.1>
+  a owl:Ontology , adms:SemanticAsset , voaf:Vocabulary , cc:Work ;
+  dcterms:title "Juso Ontology"@en , "주소 온톨로지"@ko ;
+  dcterms:description """
+    Juso Ontology is a Web vocabulary for describing geographical addresses and
+    features.
+    """@en ;
+  rdfs:comment """
+    <div>
+      The master version of this vocabulary is maintained in <a
+      href="https://github.com/listinc/juso-ontology">the GitHub repository</a>
+      so others can contribute edits and improvements.
+    </div>
+    """^^rdf:XMLLiteral ;
+  rdfs:comment """
+    Most of the descriptions given here are from Wikipedia or from the related
+    ontologies and vocabularies.
+    """@en , """
+    There is an extension to this ontology with some country-specific terms for
+    <a href="http://rdfs.co/juso/kr/">South Korea</a>.
+    """@ko;
+  vann:termGroup
+    juso:CoreGroup ,
+    juso:PoliticalDivisionGroup ,
+    juso:AddressGroup ;
+  rdfs:seeAlso <https://github.com/listinc/juso-ontology> ;
+  dcterms:creator <http://jayg.me/> ;
+  dcterms:publisher <http://listinc.kr/id/listinc> ;
+  vann:preferredNamespaceUri "http://rdfs.co/juso/" ;
+  vann:preferredNamespacePrefix "juso" ;
+  dcterms:type <http://purl.org/adms/assettype/Ontology> ;
+  adms:status <http://purl.org/adms/status/UnderDevelopment> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  dcterms:identifier "http://rdfs.co/juso/0.1" ;
+  dcterms:isVersionOf <http://rdfs.co/juso/> ;
+  owl:versionInfo "0.1" ;
+  vann:example _:example1 ;
+  dcterms:hasFormat
+    <http://rdfs.co/juso/0.1/html> ,
+    <http://rdfs.co/juso/0.1/ttl> ,
+    <http://rdfs.co/juso/0.1/rdf> ;
+  dcterms:rights
+    "Copyright © 2015 LiST Inc. Some Rights Reserved." ;
+  cc:license <http://creativecommons.org/licenses/by/4.0/> .
+
+<http://rdfs.co/juso/0.1/html> dcterms:format [
+  a dcterms:MediaType ;
+  dcam:memberOf dcterms:IMT ;
+  rdf:value "text/html" ;
+  rdfs:label "HTML"@en ;
+  rdfs:seeAlso <http://www.iana.org/assignments/media-types/text/html>
+] .
+
+<http://rdfs.co/juso/0.1/ttl> dcterms:format [
+  a dcterms:MediaType ;
+  dcam:memberOf dcterms:IMT ;
+  rdf:value "text/turtle" ;
+  rdfs:label "Turtle"@en ;
+  rdfs:seeAlso <http://www.iana.org/assignments/media-types/text/turtle>
+] .
+
+<http://rdfs.co/juso/0.1/rdf> dcterms:format [
+  a dcterms:MediaType ;
+  dcam:memberOf dcterms:IMT ;
+  rdf:value "application/rdf+xml" ;
+  rdfs:label "RDF/XML"@en ;
+  rdfs:seeAlso
+    <http://www.iana.org/assignments/media-types/application/rdf+xml>
+] .
+
+<http://jayg.me/> a foaf:Person ;
+  owl:sameAs <http://listinc.kr/id/member/jgkim> ;
+  foaf:name "James G. Kim"@en , "김보람"@ko ;
+  foaf:mbox_sha1sum "f03421e94730da58e8943d3a1d2c4c6b02898e14" ;
+  foaf:homepage <http://jayg.org/> ;
+  org:memberOf <http://listinc.kr/id/listinc> .
+
+<http://listinc.kr/id/listinc> a foaf:Organization , org:Organization ;
+  foaf:name "LiST Inc."@en , "주식회사 리스트"@ko ;
+  foaf:mbox_sha1sum "de068365487dd2da1f2e88f1eaad0217bff79b40" ;
+  foaf:homepage <http://listinc.kr/> , <http://li-st.com/> ;
+  foaf:member <http://listinc.kr/id/member/jgkim> .
+
+# Term Groups #################################################################
+
+juso:CoreGroup a rdf:Bag ;
+  rdfs:label "Core Terms"@en ;
+  rdfs:comment """
+    These classes and properties form the core of Juso Ontology. They describe
+    fundamental characteristics of geography in relatively broad terms.
+    """@en ;
+  rdf:_1 juso:SpatialThing ;
+  rdf:_2 juso:Feature ;
+  rdf:_3 juso:Geometry ;
+  rdf:_4 juso:Address ;
+  rdf:_5 juso:name ;
+  rdf:_6 juso:within ;
+  rdf:_7 juso:endonym ;
+  rdf:_8 juso:exonym ;
+  rdf:_9 juso:geometry ;
+  rdf:_10 juso:address ;
+  rdf:_11 juso:historical_address .
+
+juso:PoliticalDivisionGroup a rdf:Bag ;
+  rdfs:label "Political Division Terms"@en ;
+  rdfs:comment """
+    These classes and properties are used to describe political and
+    administrative divisions.
+    """@en ;
+  rdf:_1 juso:PoliticalDivision ;
+  rdf:_2 juso:Country ;
+  rdf:_3 juso:AdministrativeDivision ;
+  rdf:_4 juso:FirstLevelAdministrativeDivision ;
+  rdf:_5 juso:SecondLevelAdministrativeDivision ;
+  rdf:_6 juso:ThirdLevelAdministrativeDivision ;
+  rdf:_7 juso:FourthLevelAdministrativeDivision ;
+  rdf:_8 juso:FifthLevelAdministrativeDivision ;
+  rdf:_9 juso:FederatedState ;
+  rdf:_10 juso:Province ;
+  rdf:_11 juso:County ;
+  rdf:_12 juso:Parish ;
+  rdf:_13 juso:Borough ;
+  rdf:_14 juso:CapitalDistrict ;
+  rdf:_15 juso:City ;
+  rdf:_16 juso:ConsolidatedCityCounty ;
+  rdf:_17 juso:Municipality ;
+  rdf:_18 juso:District ;
+  rdf:_19 juso:Town ;
+  rdf:_20 juso:Township ;
+  rdf:_21 juso:Neighborhood ;
+  rdf:_22 juso:Village ;
+  rdf:_23 juso:Hamlet ;
+  rdf:_24 juso:political_division ;
+  rdf:_25 juso:parent .
+
+juso:AddressGroup a rdf:Bag ;
+  rdfs:label "Address Terms"@en ;
+  rdfs:comment """
+    These classes and properties are used to describe addresses.
+    """@en ;
+  rdf:_1 juso:full_address ;
+  rdf:_2 juso:country ;
+  rdf:_3 juso:first_level_administrative_division ;
+  rdf:_4 juso:second_level_administrative_division ;
+  rdf:_5 juso:third_level_administrative_division ;
+  rdf:_6 juso:fourth_level_administrative_division ;
+  rdf:_7 juso:fifth_level_administrative_division ;
+  rdf:_8 juso:Thoroughfare ;
+  rdf:_9 juso:Street ;
+  rdf:_10 juso:thoroughfare ;
+  rdf:_11 juso:thoroughfare_address ;
+  rdf:_12 juso:locator ;
+  rdf:_13 juso:locator_address ;
+  rdf:_14 juso:po_box ;
+  rdf:_15 juso:PostalCode ;
+  rdf:_16 juso:postal_code .
+
+# Classes #####################################################################
+
+juso:SpatialThing a owl:Class ;
+  owl:sameAs geo:SpatialThing , gsp:SpatialObject ;
+  skos:prefLabel "Spatial Thing"@en ;
+  skos:altLabel "Spatial Object"@en ;
+  skos:definition """
+    Anything that has a spatial representation, i.e. size, shape, or position.
+    e.g. people, places, objects, as well as abstract areas like cubes.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "testing"@en .
+
+juso:Feature a owl:Class ;
+  owl:sameAs spatial:Feature ;
+  owl:equivalentClass gn:Feature ;
+  rdfs:subClassOf juso:SpatialThing , gsp:Feature ;
+  owl:disjointWith juso:Geometry ;
+  skos:prefLabel "Geographical Feature"@en ;
+  skos:altLabel "Feature"@en ;
+  skos:definition """
+    Geographical features are man-made or naturally-created features associated
+    with a location relative to the Earth.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Geographical_feature> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Geometry a owl:Class ;
+  owl:sameAs ngeo:Geometry , gsp:Geometry , locn:Geometry ;
+  rdfs:subClassOf juso:SpatialThing ;
+  owl:disjointWith juso:Feature ;
+  skos:prefLabel "Geometry"@en , "기하"@ko ;
+  skos:definition """
+    Geometry provides "the means for the quantitative description, by means of
+    coordinates and mathematical functions, of the spatial characteristics of
+    features, including dimension, position, size, shape, and orientation", as
+    defined in ISO 19107.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Geometry> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Address a owl:Class ;
+  owl:sameAs locn:Address , ic:Address ;
+  skos:prefLabel "Address"@en , "주소"@ko ;
+  skos:altLabel "Geographical Address"@en , "Postal Address"@en ;
+  skos:definition """
+    An address is a collection of information, presented in a mostly fixed
+    format, used for describing the location of a building, apartment, or other
+    structure or a plot of land, generally using political boundaries and
+    street names as references, along with other identifiers such as house or
+    apartment numbers. Some addresses also contain special codes to aid routing
+    of mail and packages, such as a ZIP code or post code.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Address_(geography)> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "testing"@en .
+
+juso:PoliticalDivision a owl:Class ;
+  owl:equivalentClass schema:AdministrativeArea ;
+  rdfs:subClassOf juso:Feature ;
+  skos:prefLabel "Political Division"@en ;
+  skos:definition """
+    A political division is a geographic region accepted to be in the
+    jurisdiction of a particular governmental entity. The particular government
+    entity varies as each organizes its operations by further divisions
+    (subdivisions of the state) to further its tasks and satisfy its
+    responsibilities.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Political_division> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Country a owl:Class ;
+  owl:sameAs dbpedia:Country , schema:Country , lgdo:Country ;
+  rdfs:subClassOf juso:PoliticalDivision ;
+  skos:prefLabel "Country"@en , "나라"@ko , "国"@ja ;
+  skos:altLabel "국가"@ko , "国家"@ja ;
+  skos:definition """
+    A country is a region that is identified as a distinct entity in political
+    geography. A country may be an independent sovereign state or one that is
+    occupied by another state, as a non-sovereign or formerly sovereign
+    political division, or a geographic region associated with sets of
+    previously independent or differently associated people with distinct
+    political characteristics.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Country> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:AdministrativeDivision a owl:Class ;
+  rdfs:subClassOf juso:PoliticalDivision ;
+  skos:prefLabel "Administrative Division"@en ;
+  skos:altLabel
+    "Administrative Unit"@en ,
+    "Administrative Entity"@en ,
+    "Country Subdivision"@en ,
+    "Geopolitical Division"@en ,
+    "Subnational Entity"@en ;
+  skos:definition """
+    An administrative division is a portion of a country or other region
+    delineated for the purpose of administration. Administrative divisions are
+    each granted a certain degree of autonomy and are usually required to
+    manage themselves through their own local governments.
+    """@en ;
+  rdfs:seeAlso
+    <https://en.wikipedia.org/wiki/Administrative_division> , gn:A.ADMD ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:FirstLevelAdministrativeDivision a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "First-level Administrative Division"@en ;
+  skos:altLabel
+    "First-order Administrative Division"@en ,
+    "First Administrative Level"@en ;
+  skos:definition """
+    A primary administrative division of a country, such as a state in the
+    United States.
+    """@en ;
+  rdfs:seeAlso gn:A.ADM1 ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:SecondLevelAdministrativeDivision a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Second-level Administrative Division"@en ;
+  skos:altLabel
+    "Second-order Administrative Division"@en ,
+    "Second Administrative Level"@en ;
+  skos:definition """
+    A subdivision of a first-level administrative division.
+    """@en ;
+  rdfs:seeAlso gn:A.ADM2 ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:ThirdLevelAdministrativeDivision a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Third-level Administrative Division"@en ;
+  skos:altLabel
+    "Third-order Administrative Division"@en ,
+    "Third Administrative Level"@en ;
+  skos:definition """
+    A subdivision of a second-level administrative division.
+    """@en ;
+  rdfs:seeAlso gn:A.ADM3 ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:FourthLevelAdministrativeDivision a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Fourth-level Administrative Division"@en ;
+  skos:altLabel
+    "Fourth-order Administrative Division"@en ,
+    "Fourth Administrative Level"@en ;
+  skos:definition """
+    A subdivision of a third-level administrative division.
+    """@en ;
+  rdfs:seeAlso gn:A.ADM4 ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:FifthLevelAdministrativeDivision a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Fifth-level Administrative Division"@en ;
+  skos:altLabel
+    "Fifth-order Administrative Division"@en ,
+    "Fifth Administrative Level"@en ;
+  skos:definition """
+    A subdivision of a fourth-level administrative division.
+    """@en ;
+  rdfs:seeAlso gn:A.ADM5 ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:FederatedState a owl:Class ;
+  rdfs:subClassOf
+    juso:AdministrativeDivision ,
+    dbpedia:State ,
+    schema:State ,
+    lgdo:State ;
+  skos:prefLabel "Federated State"@en , "연방주"@ko ;
+  skos:altLabel "State"@en , "주"@ko ;
+  skos:definition """
+    A federated state is a territorial and constitutional community forming
+    part of a federal union (federation) such as the United States and
+    Australia.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Federated_state> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Province a owl:Class ;
+  owl:sameAs dbpedia:Province ;
+  rdfs:subClassOf juso:AdministrativeDivision , schema:State ;
+  skos:prefLabel "Province"@en , "도"@ko ;
+  skos:definition """
+    A province is almost always an administrative division, within a country or
+    state.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Province> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:County a owl:Class ;
+  owl:sameAs lgdo:County ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "County"@en , "군"@ko ;
+  skos:altLabel "Cnty."@en-US , "Co."@en-GB ;
+  skos:definition """
+    A county is a geographical region of a country used for administrative or
+    other purposes, in certain modern nations.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/County> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Parish a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Parish"@en ;
+  skos:altLabel "Civil Parish"@en-GB ;
+  skos:definition """
+    A parish is an administrative division used by several countries. In parts
+    of the British Isles it is known as a civil parish to distinguish it from
+    the ecclesiastical parish.
+    """@en ;
+  rdfs:seeAlso
+    <https://en.wikipedia.org/wiki/Parish_(administrative_division)> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:CapitalDistrict a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Capital District"@en ;
+  skos:altLabel "Capital Territory"@en ;
+  skos:definition """
+    A capital district or capital territory is normally a specially designated
+    administrative division where a country's seat of government is located.
+    """@en ;
+  rdfs:seeAlso
+    <https://en.wikipedia.org/wiki/Capital_districts_and_territories> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:City a owl:Class ;
+  owl:sameAs dbpedia:City , lgdo:City ;
+  rdfs:subClassOf juso:AdministrativeDivision , schema:City ;
+  skos:prefLabel "City"@en , "시"@ko , "市"@ja ;
+  skos:definition """
+    A city is a large and permanent human settlement. Although there is no
+    agreement on how a city is distinguished from a town in general English
+    language meanings, many cities have a particular administrative, legal, or
+    historical status based on local law.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/City> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:ConsolidatedCityCounty a owl:Class ;
+  rdfs:subClassOf juso:City , juso:County ;
+  skos:prefLabel "Consolidated City-county"@en ;
+  skos:definition """
+    A consolidated city-county is a city and county that have been merged into
+    one unified jurisdiction. As such it is simultaneously a city, which is a
+    municipal corporation, and a county, which is an administrative division of
+    a state. It has the powers and responsibilities of both types of entities.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Consolidated_city-county> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Municipality a owl:Class ;
+  owl:sameAs dbpedia:Municipality , lgdo:Municipality ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Municipality"@en ;
+  skos:definition """
+    A municipality is usually an urban administrative division having corporate
+    status and usually powers of self-government or jurisdiction.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Municipality> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:District a owl:Class ;
+  owl:sameAs dbpedia:District ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "District"@en , "구"@ko ;
+  skos:definition """
+    A district is a type of administrative division that, in some countries, is
+    managed by local government. Across the world, areas known as "districts"
+    vary greatly in size, spanning entire regions or counties, several
+    municipalities, subdivisions of municipalities, school district, or
+    political district.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/District> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Town a owl:Class ;
+  owl:sameAs dbpedia:Town , lgdo:Town ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Town"@en , "읍"@ko ;
+  skos:definition """
+    A town is a human settlement larger than a village but smaller than a city.
+    The size definition for what constitutes a "town" varies considerably in
+    different parts of the world.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Town> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Township a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Township"@en , "면"@ko ;
+  skos:definition """
+    The word township is used to refer to different kinds of settlements in
+    different countries.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Township> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Neighborhood a owl:Class ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Neighborhood"@en-US , "Neighbourhood"@en-GB , "동"@ko ;
+  skos:definition """
+    A neighborhood, or neighbourhood, is a geographically localised community
+    within a larger city, town, suburb or rural area.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Neighbourhood> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Village a owl:Class ;
+  owl:sameAs dbpedia:Village , lgdo:Village ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Village"@en , "리"@ko ;
+  skos:definition """
+    A village is a clustered human settlement or community, larger than a
+    hamlet but smaller than a town, with a population ranging from a few
+    hundred to a few thousand.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Village> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Hamlet a owl:Class ;
+  owl:sameAs lgdo:Hamlet ;
+  rdfs:subClassOf juso:AdministrativeDivision ;
+  skos:prefLabel "Hamlet"@en ;
+  skos:definition """
+    A hamlet is a type of settlement. The definition of hamlet varies by
+    country. It usually refers to a small settlement, with a small population
+    that is usually under 100, in a rural area, or a component of a larger
+    settlement or municipality. Hamlets are typically unincorporated
+    communities.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Hamlet_(place)> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Thoroughfare a owl:Class ;
+  rdfs:subClassOf juso:Feature ;
+  skos:prefLabel "Thoroughfare"@en ;
+  skos:definition """
+    A passage or way through from one location to another, which is usually
+    used a component of an address. A thoroughfare is not necessarily a road,
+    it might be a waterway or some other feature.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Thoroughfare> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:Street a owl:Class ;
+  rdfs:subClassOf juso:Thoroughfare ;
+  skos:prefLabel "Street"@en ;
+  skos:definition """
+    A street is a public thoroughfare (usually paved) in a built environment.
+    Practically all public streets in Western countries and the majority
+    elsewhere (though not in Japan) are given a street or road name or at least
+    a number to identify them and any addresses located along the streets.
+    Alleys in some places do not have names.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Street> , gn:R.ST ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:PostalCode a owl:Class ;
+  skos:prefLabel "Postal Code"@en , "우편번호"@ko ;
+  skos:altLabel
+    "Postcode"@en ,
+    "Post Code"@en ,
+    "Eircode"@en ,
+    "PIN Code"@en ,
+    "ZIP Code"@en ;
+  skos:definition """
+    A postal code is a series of letters and/or digits, sometimes including
+    spaces or punctuation, included in a postal address for the purpose of
+    sorting mail.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Postal_code> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+# Properties ##################################################################
+
+juso:name a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dcterms:title , schema:name ;
+  rdfs:domain juso:SpatialThing ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "name"@en , "이름"@ko ;
+  skos:definition """
+    This property indicates the name of the spatial thing.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "testing"@en .
+
+juso:within a owl:TransitiveProperty ;
+  owl:sameAs gsp:sfWithin , spatial:P ;
+  owl:inverseOf gsp:sfContains , spatial:Pi ;
+  rdfs:subPropertyOf geo:location , locn:location ;
+  rdfs:domain juso:SpatialThing ;
+  rdfs:range juso:SpatialThing ;
+  skos:prefLabel "within"@en ;
+  skos:definition """
+    A spatial thing that contains the current one within the borders of its own
+    region.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "testing"@en .
+
+juso:endonym a owl:DatatypeProperty ;
+  rdfs:subPropertyOf juso:name , gn:officialName , skos:prefLabel ;
+  rdfs:domain juso:Feature ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "endonym"@en ;
+  skos:definition """
+    The endonym is a name given by members of a particular ethnolinguistic
+    group to its homeland or a specific place within it.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Exonym_and_endonym> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:exonym a owl:DatatypeProperty ;
+  rdfs:subPropertyOf juso:name , gn:alternateName , skos:altLabel ;
+  rdfs:domain juso:Feature ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "exonym"@en ;
+  skos:definition """
+    The exonym is an external name for a geographical place: a common name used
+    only outside the place in question, usually for historical reasons.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/Exonym_and_endonym> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:geometry a owl:ObjectProperty ;
+  rdfs:subPropertyOf ngeo:geometry , locn:geometry ;
+  rdfs:domain juso:Feature ;
+  rdfs:range juso:Geometry ;
+  skos:prefLabel "geometry"@en ;
+  skos:definition """
+    This property associates any feature with the corresponding geometry.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:address a owl:ObjectProperty ;
+  rdfs:subPropertyOf ic:address , locn:address ;
+  rdfs:domain juso:SpatialThing ;
+  rdfs:range juso:Address ;
+  skos:prefLabel "address"@en ;
+  skos:definition """
+    This property associates anything with its address.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:historical_address a owl:ObjectProperty ;
+  rdfs:domain juso:SpatialThing ;
+  rdfs:range juso:Address ;
+  skos:prefLabel "historical address"@en ;
+  skos:definition """
+    This property associates anything with one of its historical address.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:political_division a owl:TransitiveProperty ;
+  rdfs:domain juso:Feature ;
+  rdfs:range juso:PoliticalDivision ;
+  skos:prefLabel "political division"@en ;
+  skos:definition """
+    A politial or administrative division that contain the current feature.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:parent a owl:ObjectProperty ;
+  rdfs:subPropertyOf juso:political_division , gn:parentFeature ;
+  rdfs:domain juso:Feature ;
+  rdfs:range juso:PoliticalDivision ;
+  skos:prefLabel "parent politial division"@en ;
+  skos:definition """
+    A politial or administrative division that is a direct parent of the
+    current feature.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:full_address a owl:DatatypeProperty ;
+  owl:sameAs locn:fullAddress ;
+  rdfs:domain juso:Address ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "full address"@en ;
+  skos:definition """
+    The complete address written as a string, with or without formatting.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "testing"@en .
+
+juso:country a owl:ObjectProperty ;
+  owl:sameAs ic:hasCountry ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:Country ;
+  skos:prefLabel "country"@en ;
+  skos:definition """
+    The uppermost politial division for the address, almost always a country.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:first_level_administrative_division a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:FirstLevelAdministrativeDivision ;
+  skos:prefLabel "first-level administrative division"@en ;
+  skos:definition """
+    The first-level administrative division (region) of the address, usually a
+    county, state or other such area that typically encompasses several
+    localities.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:second_level_administrative_division a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:SecondLevelAdministrativeDivision ;
+  skos:prefLabel "second-level administrative division"@en ;
+  skos:definition """
+    The second-level administrative division (locality) of the address, usually
+    a city.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:third_level_administrative_division a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:ThirdLevelAdministrativeDivision ;
+  skos:prefLabel "third-level administrative division"@en ;
+  skos:definition """
+    The third-level administrative division of the address, if any.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:fourth_level_administrative_division a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:FourthLevelAdministrativeDivision ;
+  skos:prefLabel "fourth-level administrative division"@en ;
+  skos:definition """
+    The fourth-level administrative division of the address, if any.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:fifth_level_administrative_division a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:FifthLevelAdministrativeDivision ;
+  skos:prefLabel "fifth-level administrative division"@en ;
+  skos:definition """
+    The fifth-level administrative division of the address, if any.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:thoroughfare a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:Thoroughfare ;
+  skos:prefLabel "thoroughfare"@en ;
+  skos:definition """
+    An address component that represents the name of a passage or way through
+    from one location to another. A thoroughfare is not necessarily a road, it
+    might be a waterway or some other feature.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:thoroughfare_address a owl:DatatypeProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "thoroughfare address"@en ;
+  skos:definition """
+    This property is used to describe a unique number given to each building
+    (residential or not) or vacant lot with a mailbox in a street or other
+    thoroughfares.
+    """@en ;
+  rdfs:seeAlso <https://en.wikipedia.org/wiki/House_numbering> ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:locator a owl:ObjectProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:Feature ;
+  skos:prefLabel "locator"@en ;
+  skos:definition """
+    The real world entity identified by the address. The locator could be the
+    property or complex, of the building or part of the building, of it could
+    be a room inside a building.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:locator_address a owl:DatatypeProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "locator address"@en ;
+  skos:definition """
+    This property is used to describe a number or a sequence of characters that
+    uniquely identifies the exact locator within the relevant scope(s), that is
+    described by juso:locator.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:post_office_box a owl:DatatypeProperty ;
+  owl:sameAs locn:poBox , schema:postOfficeBoxNumber ;
+  rdfs:domain juso:Address ;
+  rdfs:range xsd:string ;
+  skos:prefLabel "post office box"@en ;
+  skos:definition """
+    This property describes the post office box number for PO box addresses.
+    A post-office box or post office box (commonly referred to as a PO box or a
+    postal box) is a uniquely addressable lockable box located on the premises
+    of a post office station.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+juso:postal_code a owl:DatatypeProperty ;
+  rdfs:domain juso:Address ;
+  rdfs:range juso:PostalCode ;
+  skos:prefLabel "postal code"@en ;
+  skos:definition """
+    This property associates any address with its postal code.
+    """@en ;
+  rdfs:isDefinedBy <http://rdfs.co/juso/> ;
+  dcterms:issued "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  status:term_status "unstable"@en .
+
+# Relations with other ontologies and vocabularies ############################
+
+dcterms:Location rdfs:subClassOf juso:SpatialThing .
+schema:Place rdfs:subClassOf juso:SpatialThing .
+lgdo:Place rdfs:subClassOf juso:SpatialThing .
+geo:Point rdfs:subClassOf juso:Geometry .
+schema:GeoCoordinates rdfs:subClassOf juso:Geometry .
+schema:GeoShape rdfs:subClassOf juso:Geometry .
+schema:PostalAddress rdfs:subClassOf juso:Address .
+vcard:Address rdfs:subClassOf juso:Address .
+schema:address rdfs:subPropertyOf juso:address .
+schema:containedIn rdfs:subPropertyOf juso:within .
+schema:geo rdfs:subPropertyOf juso:geometry .
+gsp:hasGeometry rdfs:subPropertyOf juso:geometry .
+ic:hasState rdfs:subPropertyOf juso:first_level_administrative_division .
+ic:hasStreetNumber rdfs:subPropertyOf juso:thoroughfare_address .
+ic:hasPostalCode owl:propertyChainAxiom ( juso:postal_code rdf:value ) .
+locn:postCode owl:propertyChainAxiom ( juso:postal_code rdf:value ) .
+schema:postalCode owl:propertyChainAxiom ( juso:postal_code rdf:value ) .
+vcard:postal-code owl:propertyChainAxiom ( juso:postal_code rdf:value ) .
+
+# Example #####################################################################
+
+_:example1 rdfs:label "LiST Inc."@en ;
+  rdfs:comment '''
+    <pre><code>_:YangyongBldg a juso:Feature ;
+  juso:name "Yangyong Building"@en , "양용빌딩"@ko ;
+  juso:geometry &lt;http://geohash.org/wydjrzg6ece9&gt; .
+
+_:LiSTInc a juso:SpatialThing , foaf:Organization ;
+  juso:name "LiST Inc."@en , "주식회사 리스트"@ko ;
+  juso:within _:YangyongBldg ;
+  juso:historical_address [
+    a juso:Address ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 당산동 121-17 양용빌딩 9층 150-040"@ko ,
+      "9th Floor, Yangyong Building, 121-17, Dangsan-dong, Yeongdeungpo-gu, Seoul, 150-040, South Korea"@en ;
+    juso:country &lt;http://sws.geonames.org/1835841/&gt; ;
+    juso:first_level_administrative_division &lt;http://sws.geonames.org/1835847/&gt; ;
+    juso:second_level_administrative_division &lt;http://sws.geonames.org/1832536/&gt; ;
+    juso:third_level_administrative_division &lt;http://sws.geonames.org/8692617/&gt; ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso:PostalCode ;
+      rdf:value "150-040"
+    ]
+  ] ;
+  juso:address [
+    a juso:Address ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 버드나루로19길 3 (당산동) 양용빌딩 9층 07229"@ko ,
+      "9th Floor, Yangyong Building, 3, Beodeunaru-ro 19-gil, Yeongdeungpo-gu, Seoul, 07229, South Korea"@en ;
+    juso:country &lt;http://sws.geonames.org/1835841/&gt; ;
+    juso:first_level_administrative_division &lt;http://sws.geonames.org/1835847/&gt; ;
+    juso:second_level_administrative_division &lt;http://sws.geonames.org/1832536/&gt; ;
+    juso:third_level_administrative_division &lt;http://sws.geonames.org/8692617/&gt; ;
+    juso:thoroughfare [
+      a juso:Street ;
+      juso:name "Beodeunaru-ro 19-gil"@en , "버드나루로19길"@ko ;
+      juso:parent &lt;http://sws.geonames.org/8692617/&gt;
+    ] ;
+    juso:thoroughfare_address "3" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso:PostalCode ;
+      rdf:value "07229"
+    ]
+  ] .</code></pre>
+    '''^^rdf:XMLLiteral .

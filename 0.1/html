@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:adms="http://www.w3.org/ns/adms#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:status="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:org="http://www.w3.org/ns/org#"><head><title>Juso Ontology</title><link rel="meta" type="application/rdf+xml" title="Juso Ontology" href="http://rdfs.co/juso/0.1/rdf"/><link rel="meta" type="text/turtle" title="Juso Ontology" href="http://rdfs.co/juso/0.1/ttl"/><style type="text/css">
+      h1, h2, h3, h4, h5, h6 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+      }
+
+      pre {
+        border: 1px #9999cc dotted;
+        background-color: #f3f3ff;
+        color: #000000;
+        width: 90%;
+      }
+
+      blockquote {
+        border-style: solid;
+        border-color: #d0dbe7;
+        border-width: 0 0 0 .25em;
+        padding-left: 0.5em;
+      }
+
+      blockquote, q {
+        font-style: italic;
+      }
+
+      body {
+        font-family: verdana, geneva, arial, sans-serif;
+        font-size: 0.8em;
+      }
+
+      a, p, blockquote, q, dl, dd, dt {
+        font-family: verdana, geneva, arial, sans-serif;
+        font-size: 1em;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      :link { color: #005533; background: transparent }
+      :visited { color: #008866; background: transparent }
+      :link:active, :visited:active { color: #CC0000; background: transparent }
+      :link:hover, :visited:hover { background: #ffa; }
+      code :link, code :visited { color: inherit; }
+
+      h1, h2, h3, h4, h5, h6 { text-align: left }
+      h1, h2, h3 { color: #006644; background: transparent; }
+      h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; }
+      h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; }
+      h3 { font: 700 120% sans-serif }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body { margin: 1em; padding: 1em 4em;  line-height: 1.35; }
+
+      pre { margin-left: 2em; padding: 1em; width: auto; overflow: auto; }
+      h1 + h2 { margin-top: 0; }
+      h2 { margin: 2.5em 0 1em 0; }
+      h2 + h3 { margin-top: 0; }
+      h3 { margin: 2em 0 1em 0; }
+      h4 { margin: 1.5em 0 0.75em 0; }
+      h5, h6 { margin: 1.5em 0 1em; }
+      p { margin: 1em 0; }
+      dl, dd { margin-top: 0; margin-bottom: 0; }
+      dl { margin-left: 2em; }
+      dl dd { margin-left: 2em; }
+      dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+      dd dt { margin-top: 0.25em; margin-bottom: 0; }
+      dd p { margin-top: 0; }
+      p + * &gt; li, dd li { margin: 1em 0; }
+      dt, dfn { font-weight: bold; font-style: normal; }
+      code { font-size: 1.2em; font-family: monospace; }
+      pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+      pre em { font-weight: bolder; font-style: normal; }
+      var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+      blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+      ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+      del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+      body ins, body del { display: block; }
+      body * ins, body * del { display: inline; }
+
+      .groupList li p:first-child { margin: 0; }
+      .groupList li p:first-child + p { margin: 0 1em 1em 1em; }
+
+      table.properties { width: 90%; }
+      table.properties th { text-align: right; width: 10em; font-weight: normal;}
+
+      table { border-collapse: collapse;  border: none; font-size: inherit; }
+      table thead { border-bottom: solid #999999 2px; }
+      table td, table th { border-bottom: solid #CCCCCC 1px; vertical-align: top; padding: 0.5em; }
+
+      span.lang { color: #999999; background-color: transparent; font-size: 0.7em; }
+
+      .historyList { font-size: 0.9em; }
+
+      #footer { margin-top: 4em; font-size: 0.8em; font-style: italic; text-align: right; }
+    </style></head><body><h1>Juso Ontology</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://rdfs.co/juso/0.1">http://rdfs.co/juso/0.1</a> [<a href="http://rdfs.co/juso/0.1/html">HTML</a>] [<a href="http://rdfs.co/juso/0.1/rdf">RDF/XML</a>] [<a href="http://rdfs.co/juso/0.1/ttl">Turtle</a>]</dd><dt>Latest Version</dt><dd><a href="http://rdfs.co/juso/">http://rdfs.co/juso/</a></dd><dt>
+              Author</dt><dd><a href="http://jayg.org/">James G. Kim</a>, <a href="http://li-st.com/">LiST Inc.</a></dd></dl><p class="status">This vocabulary is <em>under development</em>.</p><p class="rights">Copyright © 2015 LiST Inc. Some Rights Reserved.</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-groups">Terms Grouped by Theme</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-examples">Example</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="description">
+    Juso Ontology is a Web vocabulary for describing geographical addresses and
+    features.
+    </p><p class="comment">
+    <div>
+      The master version of this vocabulary is maintained in <a
+      href="https://github.com/listinc/juso-ontology">the GitHub repository</a>
+      so others can contribute edits and improvements.
+    </div>
+    </p><p class="comment">
+    Most of the descriptions given here are from Wikipedia or from the related
+    ontologies and vocabularies.
+    </p><p class="comment">
+    There is an extension to this ontology with some country-specific terms for
+    <a href="http://rdfs.co/juso/kr/">South Korea</a>.
+    </p><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://rdfs.co/juso/</code></pre><p>
+          When used in XML documents the suggested prefix is
+          <code>juso</code>.
+        </p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://rdfs.co/juso/address
+http://rdfs.co/juso/Address</code></pre><h2 id="sec-groups">Terms Grouped by Theme</h2><ul class="groupList"><li><p class="definition"><strong>Address Terms:
+              </strong>
+    These classes and properties are used to describe addresses.
+    </p><p><a href="#term-full_address" title="">full_address</a>, <a href="#term-thoroughfare" title="">thoroughfare</a>, <a href="#term-thoroughfare_address" title="">thoroughfare_address</a>, <a href="#term-locator" title="">locator</a>, <a href="#term-locator_address" title="">locator_address</a>, <a href="#term-po_box" title="">po_box</a>, <a href="#term-PostalCode" title="">PostalCode</a>, <a href="#term-postal_code" title="">postal_code</a>, <a href="#term-country" title="">country</a>, <a href="#term-first_level_administrative_division" title="">first_level_administrative_division</a>, <a href="#term-second_level_administrative_division" title="">second_level_administrative_division</a>, <a href="#term-third_level_administrative_division" title="">third_level_administrative_division</a>, <a href="#term-fourth_level_administrative_division" title="">fourth_level_administrative_division</a>, <a href="#term-fifth_level_administrative_division" title="">fifth_level_administrative_division</a>, <a href="#term-Thoroughfare" title="">Thoroughfare</a> and <a href="#term-Street" title="">Street</a></p></li><li><p class="definition"><strong>Core Terms:
+              </strong>
+    These classes and properties form the core of Juso Ontology. They describe
+    fundamental characteristics of geography in relatively broad terms.
+    </p><p><a href="#term-SpatialThing" title="">SpatialThing</a>, <a href="#term-address" title="">address</a>, <a href="#term-historical_address" title="">historical_address</a>, <a href="#term-Feature" title="">Feature</a>, <a href="#term-Geometry" title="">Geometry</a>, <a href="#term-Address" title="">Address</a>, <a href="#term-name" title="">name</a>, <a href="#term-within" title="">within</a>, <a href="#term-endonym" title="">endonym</a>, <a href="#term-exonym" title="">exonym</a> and <a href="#term-geometry" title="">geometry</a></p></li><li><p class="definition"><strong>Political Division Terms:
+              </strong>
+    These classes and properties are used to describe political and
+    administrative divisions.
+    </p><p><a href="#term-PoliticalDivision" title="">PoliticalDivision</a>, <a href="#term-Province" title="">Province</a>, <a href="#term-County" title="">County</a>, <a href="#term-Parish" title="">Parish</a>, <a href="#term-Borough" title="">Borough</a>, <a href="#term-CapitalDistrict" title="">CapitalDistrict</a>, <a href="#term-City" title="">City</a>, <a href="#term-ConsolidatedCityCounty" title="">ConsolidatedCityCounty</a>, <a href="#term-Municipality" title="">Municipality</a>, <a href="#term-District" title="">District</a>, <a href="#term-Town" title="">Town</a>, <a href="#term-Country" title="">Country</a>, <a href="#term-Township" title="">Township</a>, <a href="#term-Neighborhood" title="">Neighborhood</a>, <a href="#term-Village" title="">Village</a>, <a href="#term-Hamlet" title="">Hamlet</a>, <a href="#term-political_division" title="">political_division</a>, <a href="#term-parent" title="">parent</a>, <a href="#term-AdministrativeDivision" title="">AdministrativeDivision</a>, <a href="#term-FirstLevelAdministrativeDivision" title="">FirstLevelAdministrativeDivision</a>, <a href="#term-SecondLevelAdministrativeDivision" title="">SecondLevelAdministrativeDivision</a>, <a href="#term-ThirdLevelAdministrativeDivision" title="">ThirdLevelAdministrativeDivision</a>, <a href="#term-FourthLevelAdministrativeDivision" title="">FourthLevelAdministrativeDivision</a>, <a href="#term-FifthLevelAdministrativeDivision" title="">FifthLevelAdministrativeDivision</a> and <a href="#term-FederatedState" title="">FederatedState</a></p></li></ul><h2 id="sec-terms">Summary of Terms</h2><p>
+      This vocabulary defines
+      29 classes
+        
+      and
+      22 properties.
+        </p><table><thead><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr></thead><tbody><tr><td><a href="#term-Address" title="http://rdfs.co/juso/Address">Address</a></td><td><em>class</em></td><td>
+    An address is a collection of information, presented in a mostly fixed
+    format, used for describing the location of a building, apartment, or other
+    structure or a plot of land, generally using political boundaries and
+    street names as references, along with other identifiers such as house or
+    apartment numbers. Some addresses also contain special codes to aid routing
+    of mail and packages, such as a ZIP code or post code.
+    </td></tr><tr><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">AdministrativeDivision</a></td><td><em>class</em></td><td>
+    An administrative division is a portion of a country or other region
+    delineated for the purpose of administration. Administrative divisions are
+    each granted a certain degree of autonomy and are usually required to
+    manage themselves through their own local governments.
+    </td></tr><tr><td><a href="#term-CapitalDistrict" title="http://rdfs.co/juso/CapitalDistrict">CapitalDistrict</a></td><td><em>class</em></td><td>
+    A capital district or capital territory is normally a specially designated
+    administrative division where a country's seat of government is located.
+    </td></tr><tr><td><a href="#term-City" title="http://rdfs.co/juso/City">City</a></td><td><em>class</em></td><td>
+    A city is a large and permanent human settlement. Although there is no
+    agreement on how a city is distinguished from a town in general English
+    language meanings, many cities have a particular administrative, legal, or
+    historical status based on local law.
+    </td></tr><tr><td><a href="#term-ConsolidatedCityCounty" title="http://rdfs.co/juso/ConsolidatedCityCounty">ConsolidatedCityCounty</a></td><td><em>class</em></td><td>
+    A consolidated city-county is a city and county that have been merged into
+    one unified jurisdiction. As such it is simultaneously a city, which is a
+    municipal corporation, and a county, which is an administrative division of
+    a state. It has the powers and responsibilities of both types of entities.
+    </td></tr><tr><td><a href="#term-Country" title="http://rdfs.co/juso/Country">Country</a></td><td><em>class</em></td><td>
+    A country is a region that is identified as a distinct entity in political
+    geography. A country may be an independent sovereign state or one that is
+    occupied by another state, as a non-sovereign or formerly sovereign
+    political division, or a geographic region associated with sets of
+    previously independent or differently associated people with distinct
+    political characteristics.
+    </td></tr><tr><td><a href="#term-County" title="http://rdfs.co/juso/County">County</a></td><td><em>class</em></td><td>
+    A county is a geographical region of a country used for administrative or
+    other purposes, in certain modern nations.
+    </td></tr><tr><td><a href="#term-District" title="http://rdfs.co/juso/District">District</a></td><td><em>class</em></td><td>
+    A district is a type of administrative division that, in some countries, is
+    managed by local government. Across the world, areas known as "districts"
+    vary greatly in size, spanning entire regions or counties, several
+    municipalities, subdivisions of municipalities, school district, or
+    political district.
+    </td></tr><tr><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">Feature</a></td><td><em>class</em></td><td>
+    Geographical features are man-made or naturally-created features associated
+    with a location relative to the Earth.
+    </td></tr><tr><td><a href="#term-FederatedState" title="http://rdfs.co/juso/FederatedState">FederatedState</a></td><td><em>class</em></td><td>
+    A federated state is a territorial and constitutional community forming
+    part of a federal union (federation) such as the United States and
+    Australia.
+    </td></tr><tr><td><a href="#term-FifthLevelAdministrativeDivision" title="http://rdfs.co/juso/FifthLevelAdministrativeDivision">FifthLevelAdministrativeDivision</a></td><td><em>class</em></td><td>
+    A subdivision of a fourth-level administrative division.
+    </td></tr><tr><td><a href="#term-FirstLevelAdministrativeDivision" title="http://rdfs.co/juso/FirstLevelAdministrativeDivision">FirstLevelAdministrativeDivision</a></td><td><em>class</em></td><td>
+    A primary administrative division of a country, such as a state in the
+    United States.
+    </td></tr><tr><td><a href="#term-FourthLevelAdministrativeDivision" title="http://rdfs.co/juso/FourthLevelAdministrativeDivision">FourthLevelAdministrativeDivision</a></td><td><em>class</em></td><td>
+    A subdivision of a third-level administrative division.
+    </td></tr><tr><td><a href="#term-Geometry" title="http://rdfs.co/juso/Geometry">Geometry</a></td><td><em>class</em></td><td>
+    Geometry provides "the means for the quantitative description, by means of
+    coordinates and mathematical functions, of the spatial characteristics of
+    features, including dimension, position, size, shape, and orientation", as
+    defined in ISO 19107.
+    </td></tr><tr><td><a href="#term-Hamlet" title="http://rdfs.co/juso/Hamlet">Hamlet</a></td><td><em>class</em></td><td>
+    A hamlet is a type of settlement. The definition of hamlet varies by
+    country. It usually refers to a small settlement, with a small population
+    that is usually under 100, in a rural area, or a component of a larger
+    settlement or municipality. Hamlets are typically unincorporated
+    communities.
+    </td></tr><tr><td><a href="#term-Municipality" title="http://rdfs.co/juso/Municipality">Municipality</a></td><td><em>class</em></td><td>
+    A municipality is usually an urban administrative division having corporate
+    status and usually powers of self-government or jurisdiction.
+    </td></tr><tr><td><a href="#term-Neighborhood" title="http://rdfs.co/juso/Neighborhood">Neighborhood</a></td><td><em>class</em></td><td>
+    A neighborhood, or neighbourhood, is a geographically localised community
+    within a larger city, town, suburb or rural area.
+    </td></tr><tr><td><a href="#term-Parish" title="http://rdfs.co/juso/Parish">Parish</a></td><td><em>class</em></td><td>
+    A parish is an administrative division used by several countries. In parts
+    of the British Isles it is known as a civil parish to distinguish it from
+    the ecclesiastical parish.
+    </td></tr><tr><td><a href="#term-PoliticalDivision" title="http://rdfs.co/juso/PoliticalDivision">PoliticalDivision</a></td><td><em>class</em></td><td>
+    A political division is a geographic region accepted to be in the
+    jurisdiction of a particular governmental entity. The particular government
+    entity varies as each organizes its operations by further divisions
+    (subdivisions of the state) to further its tasks and satisfy its
+    responsibilities.
+    </td></tr><tr><td><a href="#term-PostalCode" title="http://rdfs.co/juso/PostalCode">PostalCode</a></td><td><em>class</em></td><td>
+    A postal code is a series of letters and/or digits, sometimes including
+    spaces or punctuation, included in a postal address for the purpose of
+    sorting mail.
+    </td></tr><tr><td><a href="#term-Province" title="http://rdfs.co/juso/Province">Province</a></td><td><em>class</em></td><td>
+    A province is almost always an administrative division, within a country or
+    state.
+    </td></tr><tr><td><a href="#term-SecondLevelAdministrativeDivision" title="http://rdfs.co/juso/SecondLevelAdministrativeDivision">SecondLevelAdministrativeDivision</a></td><td><em>class</em></td><td>
+    A subdivision of a first-level administrative division.
+    </td></tr><tr><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">SpatialThing</a></td><td><em>class</em></td><td>
+    Anything that has a spatial representation, i.e. size, shape, or position.
+    e.g. people, places, objects, as well as abstract areas like cubes.
+    </td></tr><tr><td><a href="#term-Street" title="http://rdfs.co/juso/Street">Street</a></td><td><em>class</em></td><td>
+    A street is a public thoroughfare (usually paved) in a built environment.
+    Practically all public streets in Western countries and the majority
+    elsewhere (though not in Japan) are given a street or road name or at least
+    a number to identify them and any addresses located along the streets.
+    Alleys in some places do not have names.
+    </td></tr><tr><td><a href="#term-ThirdLevelAdministrativeDivision" title="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">ThirdLevelAdministrativeDivision</a></td><td><em>class</em></td><td>
+    A subdivision of a second-level administrative division.
+    </td></tr><tr><td><a href="#term-Thoroughfare" title="http://rdfs.co/juso/Thoroughfare">Thoroughfare</a></td><td><em>class</em></td><td>
+    A passage or way through from one location to another, which is usually
+    used a component of an address. A thoroughfare is not necessarily a road,
+    it might be a waterway or some other feature.
+    </td></tr><tr><td><a href="#term-Town" title="http://rdfs.co/juso/Town">Town</a></td><td><em>class</em></td><td>
+    A town is a human settlement larger than a village but smaller than a city.
+    The size definition for what constitutes a "town" varies considerably in
+    different parts of the world.
+    </td></tr><tr><td><a href="#term-Township" title="http://rdfs.co/juso/Township">Township</a></td><td><em>class</em></td><td>
+    The word township is used to refer to different kinds of settlements in
+    different countries.
+    </td></tr><tr><td><a href="#term-Village" title="http://rdfs.co/juso/Village">Village</a></td><td><em>class</em></td><td>
+    A village is a clustered human settlement or community, larger than a
+    hamlet but smaller than a town, with a population ranging from a few
+    hundred to a few thousand.
+    </td></tr><tr><td><a href="#term-address" title="http://rdfs.co/juso/address">address</a></td><td><em>property</em></td><td>
+    This property associates anything with its address.
+    </td></tr><tr><td><a href="#term-country" title="http://rdfs.co/juso/country">country</a></td><td><em>property</em></td><td>
+    The uppermost politial division for the address, almost always a country.
+    </td></tr><tr><td><a href="#term-endonym" title="http://rdfs.co/juso/endonym">endonym</a></td><td><em>property</em></td><td>
+    The endonym is a name given by members of a particular ethnolinguistic
+    group to its homeland or a specific place within it.
+    </td></tr><tr><td><a href="#term-exonym" title="http://rdfs.co/juso/exonym">exonym</a></td><td><em>property</em></td><td>
+    The exonym is an external name for a geographical place: a common name used
+    only outside the place in question, usually for historical reasons.
+    </td></tr><tr><td><a href="#term-fifth_level_administrative_division" title="http://rdfs.co/juso/fifth_level_administrative_division">fifth_level_administrative_division</a></td><td><em>property</em></td><td>
+    The fifth-level administrative division of the address, if any.
+    </td></tr><tr><td><a href="#term-first_level_administrative_division" title="http://rdfs.co/juso/first_level_administrative_division">first_level_administrative_division</a></td><td><em>property</em></td><td>
+    The first-level administrative division (region) of the address, usually a
+    county, state or other such area that typically encompasses several
+    localities.
+    </td></tr><tr><td><a href="#term-fourth_level_administrative_division" title="http://rdfs.co/juso/fourth_level_administrative_division">fourth_level_administrative_division</a></td><td><em>property</em></td><td>
+    The fourth-level administrative division of the address, if any.
+    </td></tr><tr><td><a href="#term-full_address" title="http://rdfs.co/juso/full_address">full_address</a></td><td><em>property</em></td><td>
+    The complete address written as a string, with or without formatting.
+    </td></tr><tr><td><a href="#term-geometry" title="http://rdfs.co/juso/geometry">geometry</a></td><td><em>property</em></td><td>
+    This property associates any feature with the corresponding geometry.
+    </td></tr><tr><td><a href="#term-historical_address" title="http://rdfs.co/juso/historical_address">historical_address</a></td><td><em>property</em></td><td>
+    This property associates anything with one of its historical address.
+    </td></tr><tr><td><a href="#term-locator" title="http://rdfs.co/juso/locator">locator</a></td><td><em>property</em></td><td>
+    The real world entity identified by the address. The locator could be the
+    property or complex, of the building or part of the building, of it could
+    be a room inside a building.
+    </td></tr><tr><td><a href="#term-locator_address" title="http://rdfs.co/juso/locator_address">locator_address</a></td><td><em>property</em></td><td>
+    This property is used to describe a number or a sequence of characters that
+    uniquely identifies the exact locator within the relevant scope(s), that is
+    described by juso:locator.
+    </td></tr><tr><td><a href="#term-name" title="http://rdfs.co/juso/name">name</a></td><td><em>property</em></td><td>
+    This property indicates the name of the spatial thing.
+    </td></tr><tr><td><a href="#term-parent" title="http://rdfs.co/juso/parent">parent</a></td><td><em>property</em></td><td>
+    A politial or administrative division that is a direct parent of the
+    current feature.
+    </td></tr><tr><td><a href="#term-political_division" title="http://rdfs.co/juso/political_division">political_division</a></td><td><em>property</em></td><td>
+    A politial or administrative division that contain the current feature.
+    </td></tr><tr><td><a href="#term-post_office_box" title="http://rdfs.co/juso/post_office_box">post_office_box</a></td><td><em>property</em></td><td>
+    This property describes the post office box number for PO box addresses.
+    A post-office box or post office box (commonly referred to as a PO box or a
+    postal box) is a uniquely addressable lockable box located on the premises
+    of a post office station.
+    </td></tr><tr><td><a href="#term-postal_code" title="http://rdfs.co/juso/postal_code">postal_code</a></td><td><em>property</em></td><td>
+    This property associates any address with its postal code.
+    </td></tr><tr><td><a href="#term-second_level_administrative_division" title="http://rdfs.co/juso/second_level_administrative_division">second_level_administrative_division</a></td><td><em>property</em></td><td>
+    The second-level administrative division (locality) of the address, usually
+    a city.
+    </td></tr><tr><td><a href="#term-third_level_administrative_division" title="http://rdfs.co/juso/third_level_administrative_division">third_level_administrative_division</a></td><td><em>property</em></td><td>
+    The third-level administrative division of the address, if any.
+    </td></tr><tr><td><a href="#term-thoroughfare" title="http://rdfs.co/juso/thoroughfare">thoroughfare</a></td><td><em>property</em></td><td>
+    An address component that represents the name of a passage or way through
+    from one location to another. A thoroughfare is not necessarily a road, it
+    might be a waterway or some other feature.
+    </td></tr><tr><td><a href="#term-thoroughfare_address" title="http://rdfs.co/juso/thoroughfare_address">thoroughfare_address</a></td><td><em>property</em></td><td>
+    This property is used to describe a unique number given to each building
+    (residential or not) or vacant lot with a mailbox in a street or other
+    thoroughfares.
+    </td></tr><tr><td><a href="#term-within" title="http://rdfs.co/juso/within">within</a></td><td><em>property</em></td><td>
+    A spatial thing that contains the current one within the borders of its own
+    region.
+    </td></tr></tbody></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Address">Class: Address</h3><div class="description"><p class="definition"><strong>Definition:</strong> An address is a collection of information, presented in a mostly fixed format, used for describing the location of a building, apartment, or other structure or a plot of land, generally using political boundaries and street names as references, along with other identifiers such as house or apartment numbers. Some addresses also contain special codes to aid routing of mail and packages, such as a ZIP code or post code.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Address</td></tr><tr><th>Preferred Label:</th><td>Address<span class="lang">@en</span> and 주소<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Geographical Address<span class="lang">@en</span> and Postal Address<span class="lang">@en</span></td></tr><tr><th>Properties include:</th><td><a href="#term-country" title="http://rdfs.co/juso/country">juso:country</a>, <a href="#term-fifth_level_administrative_division" title="http://rdfs.co/juso/fifth_level_administrative_division">juso:fifth_level_administrative_division</a>, <a href="#term-first_level_administrative_division" title="http://rdfs.co/juso/first_level_administrative_division">juso:first_level_administrative_division</a>, <a href="#term-fourth_level_administrative_division" title="http://rdfs.co/juso/fourth_level_administrative_division">juso:fourth_level_administrative_division</a>, <a href="#term-full_address" title="http://rdfs.co/juso/full_address">juso:full_address</a>, <a href="#term-locator" title="http://rdfs.co/juso/locator">juso:locator</a>, <a href="#term-locator_address" title="http://rdfs.co/juso/locator_address">juso:locator_address</a>, <a href="#term-post_office_box" title="http://rdfs.co/juso/post_office_box">juso:post_office_box</a>, <a href="#term-postal_code" title="http://rdfs.co/juso/postal_code">juso:postal_code</a>, <a href="#term-second_level_administrative_division" title="http://rdfs.co/juso/second_level_administrative_division">juso:second_level_administrative_division</a>, <a href="#term-third_level_administrative_division" title="http://rdfs.co/juso/third_level_administrative_division">juso:third_level_administrative_division</a>, <a href="#term-thoroughfare" title="http://rdfs.co/juso/thoroughfare">juso:thoroughfare</a> and <a href="#term-thoroughfare_address" title="http://rdfs.co/juso/thoroughfare_address">juso:thoroughfare_address</a></td></tr><tr><th>Used with:</th><td><a href="#term-address" title="http://rdfs.co/juso/address">juso:address</a> and <a href="#term-historical_address" title="http://rdfs.co/juso/historical_address">juso:historical_address</a></td></tr><tr><th>Same as:</th><td><a href="http://ontology.eil.utoronto.ca/icontact.owl#Address">ic:Address</a> and <a href="http://www.w3.org/ns/locn#Address">locn:Address</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Address_(geography)">https://en.wikipedia.org/wiki/Address_(geography)</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-AdministrativeDivision">Class: AdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> An administrative division is a portion of a country or other region delineated for the purpose of administration. Administrative divisions are each granted a certain degree of autonomy and are usually required to manage themselves through their own local governments.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/AdministrativeDivision</td></tr><tr><th>Preferred Label:</th><td>Administrative Division<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Administrative Entity<span class="lang">@en</span>, Administrative Unit<span class="lang">@en</span>, Country Subdivision<span class="lang">@en</span>, Geopolitical Division<span class="lang">@en</span> and Subnational Entity<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-PoliticalDivision" title="http://rdfs.co/juso/PoliticalDivision">juso:PoliticalDivision</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#A.ADMD">gn:A.ADMD</a> and <a href="https://en.wikipedia.org/wiki/Administrative_division">https://en.wikipedia.org/wiki/Administrative_division</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-CapitalDistrict">Class: CapitalDistrict</h3><div class="description"><p class="definition"><strong>Definition:</strong> A capital district or capital territory is normally a specially designated administrative division where a country's seat of government is located.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/CapitalDistrict</td></tr><tr><th>Preferred Label:</th><td>Capital District<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Capital Territory<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Capital_districts_and_territories">https://en.wikipedia.org/wiki/Capital_districts_and_territories</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-City">Class: City</h3><div class="description"><p class="definition"><strong>Definition:</strong> A city is a large and permanent human settlement. Although there is no agreement on how a city is distinguished from a town in general English language meanings, many cities have a particular administrative, legal, or historical status based on local law.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/City</td></tr><tr><th>Preferred Label:</th><td>City<span class="lang">@en</span>, 市<span class="lang">@ja</span> and 시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a> and <a href="http://schema.org/City">schema:City</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/City">dbpedia:City</a> and <a href="http://linkedgeodata.org/ontology/City">lgdo:City</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/City">https://en.wikipedia.org/wiki/City</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-ConsolidatedCityCounty">Class: ConsolidatedCityCounty</h3><div class="description"><p class="definition"><strong>Definition:</strong> A consolidated city-county is a city and county that have been merged into one unified jurisdiction. As such it is simultaneously a city, which is a municipal corporation, and a county, which is an administrative division of a state. It has the powers and responsibilities of both types of entities.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/ConsolidatedCityCounty</td></tr><tr><th>Preferred Label:</th><td>Consolidated City-county<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-City" title="http://rdfs.co/juso/City">juso:City</a> and <a href="#term-County" title="http://rdfs.co/juso/County">juso:County</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Consolidated_city-county">https://en.wikipedia.org/wiki/Consolidated_city-county</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Country">Class: Country</h3><div class="description"><p class="definition"><strong>Definition:</strong> A country is a region that is identified as a distinct entity in political geography. A country may be an independent sovereign state or one that is occupied by another state, as a non-sovereign or formerly sovereign political division, or a geographic region associated with sets of previously independent or differently associated people with distinct political characteristics.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Country</td></tr><tr><th>Preferred Label:</th><td>Country<span class="lang">@en</span>, 国<span class="lang">@ja</span> and 나라<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>国家<span class="lang">@ja</span> and 국가<span class="lang">@ko</span></td></tr><tr><th>Used with:</th><td><a href="#term-country" title="http://rdfs.co/juso/country">juso:country</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-PoliticalDivision" title="http://rdfs.co/juso/PoliticalDivision">juso:PoliticalDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/Country">dbpedia:Country</a>, <a href="http://linkedgeodata.org/ontology/Country">lgdo:Country</a> and <a href="http://schema.org/Country">schema:Country</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Country">https://en.wikipedia.org/wiki/Country</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-County">Class: County</h3><div class="description"><p class="definition"><strong>Definition:</strong> A county is a geographical region of a country used for administrative or other purposes, in certain modern nations.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/County</td></tr><tr><th>Preferred Label:</th><td>County<span class="lang">@en</span> and 군<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Cnty.<span class="lang">@en-US</span> and Co.<span class="lang">@en-GB</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://linkedgeodata.org/ontology/County">lgdo:County</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/County">https://en.wikipedia.org/wiki/County</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-District">Class: District</h3><div class="description"><p class="definition"><strong>Definition:</strong> A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as "districts" vary greatly in size, spanning entire regions or counties, several municipalities, subdivisions of municipalities, school district, or political district.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/District</td></tr><tr><th>Preferred Label:</th><td>District<span class="lang">@en</span> and 구<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/District">dbpedia:District</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/District">https://en.wikipedia.org/wiki/District</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Feature">Class: Feature</h3><div class="description"><p class="definition"><strong>Definition:</strong> Geographical features are man-made or naturally-created features associated with a location relative to the Earth.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Feature</td></tr><tr><th>Preferred Label:</th><td>Geographical Feature<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Feature<span class="lang">@en</span></td></tr><tr><th>Properties include:</th><td><a href="#term-endonym" title="http://rdfs.co/juso/endonym">juso:endonym</a>, <a href="#term-exonym" title="http://rdfs.co/juso/exonym">juso:exonym</a>, <a href="#term-geometry" title="http://rdfs.co/juso/geometry">juso:geometry</a>, <a href="#term-parent" title="http://rdfs.co/juso/parent">juso:parent</a> and <a href="#term-political_division" title="http://rdfs.co/juso/political_division">juso:political_division</a></td></tr><tr><th>Used with:</th><td><a href="#term-locator" title="http://rdfs.co/juso/locator">juso:locator</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a> and <a href="http://www.opengis.net/ont/geosparql#Feature">gsp:Feature</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-Geometry" title="http://rdfs.co/juso/Geometry">juso:Geometry</a></td></tr><tr><th>Equivalent to:</th><td><a href="http://www.geonames.org/ontology#Feature">gn:Feature</a></td></tr><tr><th>Same as:</th><td><a href="http://geovocab.org/spatial#Feature">spatial:Feature</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Geographical_feature">https://en.wikipedia.org/wiki/Geographical_feature</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-FederatedState">Class: FederatedState</h3><div class="description"><p class="definition"><strong>Definition:</strong> A federated state is a territorial and constitutional community forming part of a federal union (federation) such as the United States and Australia.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/FederatedState</td></tr><tr><th>Preferred Label:</th><td>Federated State<span class="lang">@en</span> and 연방주<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>State<span class="lang">@en</span> and 주<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://dbpedia.org/ontology/State">dbpedia:State</a>, <a href="http://linkedgeodata.org/ontology/State">lgdo:State</a>, <a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a> and <a href="http://schema.org/State">schema:State</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Federated_state">https://en.wikipedia.org/wiki/Federated_state</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-FifthLevelAdministrativeDivision">Class: FifthLevelAdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> A subdivision of a fourth-level administrative division.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/FifthLevelAdministrativeDivision</td></tr><tr><th>Preferred Label:</th><td>Fifth-level Administrative Division<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Fifth Administrative Level<span class="lang">@en</span> and Fifth-order Administrative Division<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-fifth_level_administrative_division" title="http://rdfs.co/juso/fifth_level_administrative_division">juso:fifth_level_administrative_division</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#A.ADM5">gn:A.ADM5</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-FirstLevelAdministrativeDivision">Class: FirstLevelAdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> A primary administrative division of a country, such as a state in the United States.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/FirstLevelAdministrativeDivision</td></tr><tr><th>Preferred Label:</th><td>First-level Administrative Division<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>First Administrative Level<span class="lang">@en</span> and First-order Administrative Division<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-first_level_administrative_division" title="http://rdfs.co/juso/first_level_administrative_division">juso:first_level_administrative_division</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#A.ADM1">gn:A.ADM1</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-FourthLevelAdministrativeDivision">Class: FourthLevelAdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> A subdivision of a third-level administrative division.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/FourthLevelAdministrativeDivision</td></tr><tr><th>Preferred Label:</th><td>Fourth-level Administrative Division<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Fourth Administrative Level<span class="lang">@en</span> and Fourth-order Administrative Division<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-fourth_level_administrative_division" title="http://rdfs.co/juso/fourth_level_administrative_division">juso:fourth_level_administrative_division</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#A.ADM4">gn:A.ADM4</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Geometry">Class: Geometry</h3><div class="description"><p class="definition"><strong>Definition:</strong> Geometry provides "the means for the quantitative description, by means of coordinates and mathematical functions, of the spatial characteristics of features, including dimension, position, size, shape, and orientation", as defined in ISO 19107.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Geometry</td></tr><tr><th>Preferred Label:</th><td>Geometry<span class="lang">@en</span> and 기하<span class="lang">@ko</span></td></tr><tr><th>Used with:</th><td><a href="#term-geometry" title="http://rdfs.co/juso/geometry">juso:geometry</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Same as:</th><td><a href="http://geovocab.org/geometry#Geometry">ngeo:Geometry</a>, <a href="http://www.opengis.net/ont/geosparql#Geometry">gsp:Geometry</a> and <a href="http://www.w3.org/ns/locn#Geometry">locn:Geometry</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Geometry">https://en.wikipedia.org/wiki/Geometry</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Hamlet">Class: Hamlet</h3><div class="description"><p class="definition"><strong>Definition:</strong> A hamlet is a type of settlement. The definition of hamlet varies by country. It usually refers to a small settlement, with a small population that is usually under 100, in a rural area, or a component of a larger settlement or municipality. Hamlets are typically unincorporated communities.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Hamlet</td></tr><tr><th>Preferred Label:</th><td>Hamlet<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://linkedgeodata.org/ontology/Hamlet">lgdo:Hamlet</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Hamlet_(place)">https://en.wikipedia.org/wiki/Hamlet_(place)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Municipality">Class: Municipality</h3><div class="description"><p class="definition"><strong>Definition:</strong> A municipality is usually an urban administrative division having corporate status and usually powers of self-government or jurisdiction.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Municipality</td></tr><tr><th>Preferred Label:</th><td>Municipality<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/Municipality">dbpedia:Municipality</a> and <a href="http://linkedgeodata.org/ontology/Municipality">lgdo:Municipality</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Municipality">https://en.wikipedia.org/wiki/Municipality</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Neighborhood">Class: Neighborhood</h3><div class="description"><p class="definition"><strong>Definition:</strong> A neighborhood, or neighbourhood, is a geographically localised community within a larger city, town, suburb or rural area.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Neighborhood</td></tr><tr><th>Preferred Label:</th><td>Neighborhood<span class="lang">@en-US</span>, Neighbourhood<span class="lang">@en-GB</span> and 동<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Neighbourhood">https://en.wikipedia.org/wiki/Neighbourhood</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Parish">Class: Parish</h3><div class="description"><p class="definition"><strong>Definition:</strong> A parish is an administrative division used by several countries. In parts of the British Isles it is known as a civil parish to distinguish it from the ecclesiastical parish.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Parish</td></tr><tr><th>Preferred Label:</th><td>Parish<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Civil Parish<span class="lang">@en-GB</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Parish_(administrative_division)">https://en.wikipedia.org/wiki/Parish_(administrative_division)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-PoliticalDivision">Class: PoliticalDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> A political division is a geographic region accepted to be in the jurisdiction of a particular governmental entity. The particular government entity varies as each organizes its operations by further divisions (subdivisions of the state) to further its tasks and satisfy its responsibilities.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/PoliticalDivision</td></tr><tr><th>Preferred Label:</th><td>Political Division<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-parent" title="http://rdfs.co/juso/parent">juso:parent</a> and <a href="#term-political_division" title="http://rdfs.co/juso/political_division">juso:political_division</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Equivalent to:</th><td><a href="http://schema.org/AdministrativeArea">schema:AdministrativeArea</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Political_division">https://en.wikipedia.org/wiki/Political_division</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-PostalCode">Class: PostalCode</h3><div class="description"><p class="definition"><strong>Definition:</strong> A postal code is a series of letters and/or digits, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/PostalCode</td></tr><tr><th>Preferred Label:</th><td>Postal Code<span class="lang">@en</span> and 우편번호<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Eircode<span class="lang">@en</span>, PIN Code<span class="lang">@en</span>, Post Code<span class="lang">@en</span>, Postcode<span class="lang">@en</span> and ZIP Code<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-postal_code" title="http://rdfs.co/juso/postal_code">juso:postal_code</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Postal_code">https://en.wikipedia.org/wiki/Postal_code</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Province">Class: Province</h3><div class="description"><p class="definition"><strong>Definition:</strong> A province is almost always an administrative division, within a country or state.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Province</td></tr><tr><th>Preferred Label:</th><td>Province<span class="lang">@en</span> and 도<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a> and <a href="http://schema.org/State">schema:State</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/Province">dbpedia:Province</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Province">https://en.wikipedia.org/wiki/Province</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-SecondLevelAdministrativeDivision">Class: SecondLevelAdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> A subdivision of a first-level administrative division.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/SecondLevelAdministrativeDivision</td></tr><tr><th>Preferred Label:</th><td>Second-level Administrative Division<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Second Administrative Level<span class="lang">@en</span> and Second-order Administrative Division<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-second_level_administrative_division" title="http://rdfs.co/juso/second_level_administrative_division">juso:second_level_administrative_division</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#A.ADM2">gn:A.ADM2</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-SpatialThing">Class: SpatialThing</h3><div class="description"><p class="definition"><strong>Definition:</strong> Anything that has a spatial representation, i.e. size, shape, or position. e.g. people, places, objects, as well as abstract areas like cubes.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/SpatialThing</td></tr><tr><th>Preferred Label:</th><td>Spatial Thing<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Spatial Object<span class="lang">@en</span></td></tr><tr><th>Properties include:</th><td><a href="#term-address" title="http://rdfs.co/juso/address">juso:address</a>, <a href="#term-historical_address" title="http://rdfs.co/juso/historical_address">juso:historical_address</a>, <a href="#term-name" title="http://rdfs.co/juso/name">juso:name</a> and <a href="#term-within" title="http://rdfs.co/juso/within">juso:within</a></td></tr><tr><th>Used with:</th><td><a href="#term-within" title="http://rdfs.co/juso/within">juso:within</a></td></tr><tr><th>Same as:</th><td><a href="http://www.opengis.net/ont/geosparql#SpatialObject">gsp:SpatialObject</a> and <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">geo:SpatialThing</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Street">Class: Street</h3><div class="description"><p class="definition"><strong>Definition:</strong> A street is a public thoroughfare (usually paved) in a built environment. Practically all public streets in Western countries and the majority elsewhere (though not in Japan) are given a street or road name or at least a number to identify them and any addresses located along the streets. Alleys in some places do not have names.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Street</td></tr><tr><th>Preferred Label:</th><td>Street<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-Thoroughfare" title="http://rdfs.co/juso/Thoroughfare">juso:Thoroughfare</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#R.ST">gn:R.ST</a> and <a href="https://en.wikipedia.org/wiki/Street">https://en.wikipedia.org/wiki/Street</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-ThirdLevelAdministrativeDivision">Class: ThirdLevelAdministrativeDivision</h3><div class="description"><p class="definition"><strong>Definition:</strong> A subdivision of a second-level administrative division.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/ThirdLevelAdministrativeDivision</td></tr><tr><th>Preferred Label:</th><td>Third-level Administrative Division<span class="lang">@en</span></td></tr><tr><th>Alternate Label:</th><td>Third Administrative Level<span class="lang">@en</span> and Third-order Administrative Division<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-third_level_administrative_division" title="http://rdfs.co/juso/third_level_administrative_division">juso:third_level_administrative_division</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="http://www.geonames.org/ontology#A.ADM3">gn:A.ADM3</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Thoroughfare">Class: Thoroughfare</h3><div class="description"><p class="definition"><strong>Definition:</strong> A passage or way through from one location to another, which is usually used a component of an address. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Thoroughfare</td></tr><tr><th>Preferred Label:</th><td>Thoroughfare<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-thoroughfare" title="http://rdfs.co/juso/thoroughfare">juso:thoroughfare</a></td></tr><tr><th>Subclass of:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Thoroughfare">https://en.wikipedia.org/wiki/Thoroughfare</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Town">Class: Town</h3><div class="description"><p class="definition"><strong>Definition:</strong> A town is a human settlement larger than a village but smaller than a city. The size definition for what constitutes a "town" varies considerably in different parts of the world.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Town</td></tr><tr><th>Preferred Label:</th><td>Town<span class="lang">@en</span> and 읍<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/Town">dbpedia:Town</a> and <a href="http://linkedgeodata.org/ontology/Town">lgdo:Town</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Town">https://en.wikipedia.org/wiki/Town</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Township">Class: Township</h3><div class="description"><p class="definition"><strong>Definition:</strong> The word township is used to refer to different kinds of settlements in different countries.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Township</td></tr><tr><th>Preferred Label:</th><td>Township<span class="lang">@en</span> and 면<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Township">https://en.wikipedia.org/wiki/Township</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Village">Class: Village</h3><div class="description"><p class="definition"><strong>Definition:</strong> A village is a clustered human settlement or community, larger than a hamlet but smaller than a town, with a population ranging from a few hundred to a few thousand.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/Village</td></tr><tr><th>Preferred Label:</th><td>Village<span class="lang">@en</span> and 리<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-AdministrativeDivision" title="http://rdfs.co/juso/AdministrativeDivision">juso:AdministrativeDivision</a></td></tr><tr><th>Same as:</th><td><a href="http://dbpedia.org/ontology/Village">dbpedia:Village</a> and <a href="http://linkedgeodata.org/ontology/Village">lgdo:Village</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Village">https://en.wikipedia.org/wiki/Village</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-address">Property: address</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property associates anything with its address.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/address</td></tr><tr><th>Preferred Label:</th><td>address<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a></td></tr><tr><th>Range:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://ontology.eil.utoronto.ca/icontact.owl#address">ic:address</a> and <a href="http://www.w3.org/ns/locn#address">locn:address</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-country">Property: country</h3><div class="description"><p class="definition"><strong>Definition:</strong> The uppermost politial division for the address, almost always a country.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/country</td></tr><tr><th>Preferred Label:</th><td>country<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-Country" title="http://rdfs.co/juso/Country">juso:Country</a></td></tr><tr><th>Same as:</th><td><a href="http://ontology.eil.utoronto.ca/icontact.owl#hasCountry">ic:hasCountry</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-endonym">Property: endonym</h3><div class="description"><p class="definition"><strong>Definition:</strong> The endonym is a name given by members of a particular ethnolinguistic group to its homeland or a specific place within it.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/endonym</td></tr><tr><th>Preferred Label:</th><td>endonym<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Subproperty of:</th><td><a href="#term-name" title="http://rdfs.co/juso/name">juso:name</a>, <a href="http://www.geonames.org/ontology#officialName">gn:officialName</a> and <a href="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Exonym_and_endonym">https://en.wikipedia.org/wiki/Exonym_and_endonym</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-exonym">Property: exonym</h3><div class="description"><p class="definition"><strong>Definition:</strong> The exonym is an external name for a geographical place: a common name used only outside the place in question, usually for historical reasons.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/exonym</td></tr><tr><th>Preferred Label:</th><td>exonym<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Subproperty of:</th><td><a href="#term-name" title="http://rdfs.co/juso/name">juso:name</a>, <a href="http://www.geonames.org/ontology#alternateName">gn:alternateName</a> and <a href="http://www.w3.org/2004/02/skos/core#altLabel">skos:altLabel</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Exonym_and_endonym">https://en.wikipedia.org/wiki/Exonym_and_endonym</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-fifth_level_administrative_division">Property: fifth_level_administrative_division</h3><div class="description"><p class="definition"><strong>Definition:</strong> The fifth-level administrative division of the address, if any.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/fifth_level_administrative_division</td></tr><tr><th>Preferred Label:</th><td>fifth-level administrative division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-FifthLevelAdministrativeDivision" title="http://rdfs.co/juso/FifthLevelAdministrativeDivision">juso:FifthLevelAdministrativeDivision</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-first_level_administrative_division">Property: first_level_administrative_division</h3><div class="description"><p class="definition"><strong>Definition:</strong> The first-level administrative division (region) of the address, usually a county, state or other such area that typically encompasses several localities.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/first_level_administrative_division</td></tr><tr><th>Preferred Label:</th><td>first-level administrative division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-FirstLevelAdministrativeDivision" title="http://rdfs.co/juso/FirstLevelAdministrativeDivision">juso:FirstLevelAdministrativeDivision</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-fourth_level_administrative_division">Property: fourth_level_administrative_division</h3><div class="description"><p class="definition"><strong>Definition:</strong> The fourth-level administrative division of the address, if any.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/fourth_level_administrative_division</td></tr><tr><th>Preferred Label:</th><td>fourth-level administrative division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-FourthLevelAdministrativeDivision" title="http://rdfs.co/juso/FourthLevelAdministrativeDivision">juso:FourthLevelAdministrativeDivision</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-full_address">Property: full_address</h3><div class="description"><p class="definition"><strong>Definition:</strong> The complete address written as a string, with or without formatting.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/full_address</td></tr><tr><th>Preferred Label:</th><td>full address<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Same as:</th><td><a href="http://www.w3.org/ns/locn#fullAddress">locn:fullAddress</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-geometry">Property: geometry</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property associates any feature with the corresponding geometry.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/geometry</td></tr><tr><th>Preferred Label:</th><td>geometry<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Range:</th><td><a href="#term-Geometry" title="http://rdfs.co/juso/Geometry">juso:Geometry</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://geovocab.org/geometry#geometry">ngeo:geometry</a> and <a href="http://www.w3.org/ns/locn#geometry">locn:geometry</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-historical_address">Property: historical_address</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property associates anything with one of its historical address.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/historical_address</td></tr><tr><th>Preferred Label:</th><td>historical address<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a></td></tr><tr><th>Range:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-locator">Property: locator</h3><div class="description"><p class="definition"><strong>Definition:</strong> The real world entity identified by the address. The locator could be the property or complex, of the building or part of the building, of it could be a room inside a building.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/locator</td></tr><tr><th>Preferred Label:</th><td>locator<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-locator_address">Property: locator_address</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property is used to describe a number or a sequence of characters that uniquely identifies the exact locator within the relevant scope(s), that is described by juso:locator.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/locator_address</td></tr><tr><th>Preferred Label:</th><td>locator address<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-name">Property: name</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property indicates the name of the spatial thing.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/name</td></tr><tr><th>Preferred Label:</th><td>name<span class="lang">@en</span> and 이름<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://purl.org/dc/terms/title">dcterms:title</a> and <a href="http://schema.org/name">schema:name</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-parent">Property: parent</h3><div class="description"><p class="definition"><strong>Definition:</strong> A politial or administrative division that is a direct parent of the current feature.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/parent</td></tr><tr><th>Preferred Label:</th><td>parent politial division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Range:</th><td><a href="#term-PoliticalDivision" title="http://rdfs.co/juso/PoliticalDivision">juso:PoliticalDivision</a></td></tr><tr><th>Subproperty of:</th><td><a href="#term-political_division" title="http://rdfs.co/juso/political_division">juso:political_division</a> and <a href="http://www.geonames.org/ontology#parentFeature">gn:parentFeature</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-political_division">Property: political_division</h3><div class="description"><p class="definition"><strong>Definition:</strong> A politial or administrative division that contain the current feature.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/political_division</td></tr><tr><th>Preferred Label:</th><td>political division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Feature" title="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>Range:</th><td><a href="#term-PoliticalDivision" title="http://rdfs.co/juso/PoliticalDivision">juso:PoliticalDivision</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-post_office_box">Property: post_office_box</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property describes the post office box number for PO box addresses. A post-office box or post office box (commonly referred to as a PO box or a postal box) is a uniquely addressable lockable box located on the premises of a post office station.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/post_office_box</td></tr><tr><th>Preferred Label:</th><td>post office box<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Same as:</th><td><a href="http://schema.org/postOfficeBoxNumber">schema:postOfficeBoxNumber</a> and <a href="http://www.w3.org/ns/locn#poBox">locn:poBox</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-postal_code">Property: postal_code</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property associates any address with its postal code.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/postal_code</td></tr><tr><th>Preferred Label:</th><td>postal code<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-PostalCode" title="http://rdfs.co/juso/PostalCode">juso:PostalCode</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-second_level_administrative_division">Property: second_level_administrative_division</h3><div class="description"><p class="definition"><strong>Definition:</strong> The second-level administrative division (locality) of the address, usually a city.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/second_level_administrative_division</td></tr><tr><th>Preferred Label:</th><td>second-level administrative division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-SecondLevelAdministrativeDivision" title="http://rdfs.co/juso/SecondLevelAdministrativeDivision">juso:SecondLevelAdministrativeDivision</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-third_level_administrative_division">Property: third_level_administrative_division</h3><div class="description"><p class="definition"><strong>Definition:</strong> The third-level administrative division of the address, if any.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/third_level_administrative_division</td></tr><tr><th>Preferred Label:</th><td>third-level administrative division<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-ThirdLevelAdministrativeDivision" title="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">juso:ThirdLevelAdministrativeDivision</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-thoroughfare">Property: thoroughfare</h3><div class="description"><p class="definition"><strong>Definition:</strong> An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/thoroughfare</td></tr><tr><th>Preferred Label:</th><td>thoroughfare<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="#term-Thoroughfare" title="http://rdfs.co/juso/Thoroughfare">juso:Thoroughfare</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-thoroughfare_address">Property: thoroughfare_address</h3><div class="description"><p class="definition"><strong>Definition:</strong> This property is used to describe a unique number given to each building (residential or not) or vacant lot with a mailbox in a street or other thoroughfares.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/thoroughfare_address</td></tr><tr><th>Preferred Label:</th><td>thoroughfare address<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-Address" title="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/House_numbering">https://en.wikipedia.org/wiki/House_numbering</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-within">Property: within</h3><div class="description"><p class="definition"><strong>Definition:</strong> A spatial thing that contains the current one within the borders of its own region.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/within</td></tr><tr><th>Preferred Label:</th><td>within<span class="lang">@en</span></td></tr><tr><th>Domain:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a></td></tr><tr><th>Range:</th><td><a href="#term-SpatialThing" title="http://rdfs.co/juso/SpatialThing">juso:SpatialThing</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://www.w3.org/2003/01/geo/wgs84_pos#location">geo:location</a> and <a href="http://www.w3.org/ns/locn#location">locn:location</a></td></tr><tr><th>Inverse of:</th><td><a href="http://geovocab.org/spatial#Pi">spatial:Pi</a> and <a href="http://www.opengis.net/ont/geosparql#sfContains">gsp:sfContains</a></td></tr><tr><th>Same as:</th><td><a href="http://geovocab.org/spatial#P">spatial:P</a> and <a href="http://www.opengis.net/ont/geosparql#sfWithin">gsp:sfWithin</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><h2 id="sec-examples">Example</h2><div class="example"><h3>LiST Inc.</h3>
+    <pre><code>_:YangyongBldg a juso:Feature ;
+  juso:name "Yangyong Building"@en , "양용빌딩"@ko ;
+  juso:geometry &lt;http://geohash.org/wydjrzg6ece9&gt; .
+
+_:LiSTInc a juso:SpatialThing , foaf:Organization ;
+  juso:name "LiST Inc."@en , "주식회사 리스트"@ko ;
+  juso:within _:YangyongBldg ;
+  juso:historical_address [
+    a juso:Address ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 당산동 121-17 양용빌딩 9층 150-040"@ko ,
+      "9th Floor, Yangyong Building, 121-17, Dangsan-dong, Yeongdeungpo-gu, Seoul, 150-040, South Korea"@en ;
+    juso:country &lt;http://sws.geonames.org/1835841/&gt; ;
+    juso:first_level_administrative_division &lt;http://sws.geonames.org/1835847/&gt; ;
+    juso:second_level_administrative_division &lt;http://sws.geonames.org/1832536/&gt; ;
+    juso:third_level_administrative_division &lt;http://sws.geonames.org/8692617/&gt; ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso:PostalCode ;
+      rdf:value "150-040"
+    ]
+  ] ;
+  juso:address [
+    a juso:Address ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 버드나루로19길 3 (당산동) 양용빌딩 9층 07229"@ko ,
+      "9th Floor, Yangyong Building, 3, Beodeunaru-ro 19-gil, Yeongdeungpo-gu, Seoul, 07229, South Korea"@en ;
+    juso:country &lt;http://sws.geonames.org/1835841/&gt; ;
+    juso:first_level_administrative_division &lt;http://sws.geonames.org/1835847/&gt; ;
+    juso:second_level_administrative_division &lt;http://sws.geonames.org/1832536/&gt; ;
+    juso:third_level_administrative_division &lt;http://sws.geonames.org/8692617/&gt; ;
+    juso:thoroughfare [
+      a juso:Street ;
+      juso:name "Beodeunaru-ro 19-gil"@en , "버드나루로19길"@ko ;
+      juso:parent &lt;http://sws.geonames.org/8692617/&gt;
+    ] ;
+    juso:thoroughfare_address "3" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso:PostalCode ;
+      rdf:value "07229"
+    ]
+  ] .</code></pre>
+    </div><h2 id="sec-license">License</h2><div class="license"><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>.<p>
+      The following section is informational only, please refer to the
+      <a href="http://creativecommons.org/licenses/by/4.0/legalcode">original license</a>
+      for complete license terms.
+    </p><p>This license grants the following rights:</p><ul><li>making multiple
+		    copies
+    (<a href="http://creativecommons.org/ns#Reproduction">http://creativecommons.org/ns#Reproduction</a>)
+  </li><li>distribution, public
+		    display, and publicly performance
+    (<a href="http://creativecommons.org/ns#Distribution">http://creativecommons.org/ns#Distribution</a>)
+  </li><li>distribution of
+		    derivative works
+    (<a href="http://creativecommons.org/ns#DerivativeWorks">http://creativecommons.org/ns#DerivativeWorks</a>)
+  </li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license
+		    notices be kept intact
+    (<a href="http://creativecommons.org/ns#Notice">http://creativecommons.org/ns#Notice</a>)
+  </li><li>credit be given to
+		    copyright holder and/or author
+    (<a href="http://creativecommons.org/ns#Attribution">http://creativecommons.org/ns#Attribution</a>)
+  </li></ul></p></div><div id="footer">
+      Documentation generated using the <a href="http://github.com/jgkim/rdfs-toolchain">rdfs.co toolchain</a><br/>
+      based on <a href="http://iandavis.com">Ian Davis</a>'s <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>

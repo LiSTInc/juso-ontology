@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:adms="http://www.w3.org/ns/adms#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:status="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:org="http://www.w3.org/ns/org#"><head><title>South Korea Extension to Juso Ontology</title><link rel="meta" type="application/rdf+xml" title="South Korea Extension to Juso Ontology" href="http://rdfs.co/juso/kr/0.1/rdf"/><link rel="meta" type="text/turtle" title="South Korea Extension to Juso Ontology" href="http://rdfs.co/juso/kr/0.1/ttl"/><style type="text/css">
+      h1, h2, h3, h4, h5, h6 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+      }
+
+      pre {
+        border: 1px #9999cc dotted;
+        background-color: #f3f3ff;
+        color: #000000;
+        width: 90%;
+      }
+
+      blockquote {
+        border-style: solid;
+        border-color: #d0dbe7;
+        border-width: 0 0 0 .25em;
+        padding-left: 0.5em;
+      }
+
+      blockquote, q {
+        font-style: italic;
+      }
+
+      body {
+        font-family: verdana, geneva, arial, sans-serif;
+        font-size: 0.8em;
+      }
+
+      a, p, blockquote, q, dl, dd, dt {
+        font-family: verdana, geneva, arial, sans-serif;
+        font-size: 1em;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      :link { color: #005533; background: transparent }
+      :visited { color: #008866; background: transparent }
+      :link:active, :visited:active { color: #CC0000; background: transparent }
+      :link:hover, :visited:hover { background: #ffa; }
+      code :link, code :visited { color: inherit; }
+
+      h1, h2, h3, h4, h5, h6 { text-align: left }
+      h1, h2, h3 { color: #006644; background: transparent; }
+      h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; }
+      h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; }
+      h3 { font: 700 120% sans-serif }
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body { margin: 1em; padding: 1em 4em;  line-height: 1.35; }
+
+      pre { margin-left: 2em; padding: 1em; width: auto; overflow: auto; }
+      h1 + h2 { margin-top: 0; }
+      h2 { margin: 2.5em 0 1em 0; }
+      h2 + h3 { margin-top: 0; }
+      h3 { margin: 2em 0 1em 0; }
+      h4 { margin: 1.5em 0 0.75em 0; }
+      h5, h6 { margin: 1.5em 0 1em; }
+      p { margin: 1em 0; }
+      dl, dd { margin-top: 0; margin-bottom: 0; }
+      dl { margin-left: 2em; }
+      dl dd { margin-left: 2em; }
+      dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+      dd dt { margin-top: 0.25em; margin-bottom: 0; }
+      dd p { margin-top: 0; }
+      p + * &gt; li, dd li { margin: 1em 0; }
+      dt, dfn { font-weight: bold; font-style: normal; }
+      code { font-size: 1.2em; font-family: monospace; }
+      pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+      pre em { font-weight: bolder; font-style: normal; }
+      var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+      blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+      ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+      del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+      body ins, body del { display: block; }
+      body * ins, body * del { display: inline; }
+
+      .groupList li p:first-child { margin: 0; }
+      .groupList li p:first-child + p { margin: 0 1em 1em 1em; }
+
+      table.properties { width: 90%; }
+      table.properties th { text-align: right; width: 10em; font-weight: normal;}
+
+      table { border-collapse: collapse;  border: none; font-size: inherit; }
+      table thead { border-bottom: solid #999999 2px; }
+      table td, table th { border-bottom: solid #CCCCCC 1px; vertical-align: top; padding: 0.5em; }
+
+      span.lang { color: #999999; background-color: transparent; font-size: 0.7em; }
+
+      .historyList { font-size: 0.9em; }
+
+      #footer { margin-top: 4em; font-size: 0.8em; font-style: italic; text-align: right; }
+    </style></head><body><h1>South Korea Extension to Juso Ontology</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://rdfs.co/juso/kr/0.1">http://rdfs.co/juso/kr/0.1</a> [<a href="http://rdfs.co/juso/kr/0.1/html">HTML</a>] [<a href="http://rdfs.co/juso/kr/0.1/rdf">RDF/XML</a>] [<a href="http://rdfs.co/juso/kr/0.1/ttl">Turtle</a>]</dd><dt>Latest Version</dt><dd><a href="http://rdfs.co/juso/kr/">http://rdfs.co/juso/kr/</a></dd><dt>
+              Author</dt><dd><a href="http://jayg.org/">James G. Kim</a>, <a href="http://li-st.com/">LiST Inc.</a></dd></dl><p class="status">This vocabulary is <em>under development</em>.</p><p class="rights">Copyright © 2015 LiST Inc. Some Rights Reserved.</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-groups">Terms Grouped by Theme</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-examples">Example</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="description">
+    South Korea Extension to Juso Ontology is a Web vocabulary that extends
+    <a href="http://rdfs.co/juso/">Juso Ontology</a> to descrbe geographical
+    addresses and features in South Korea.
+    </p><p class="comment">
+    <div>
+      The master version of this vocabulary is maintained in <a
+      href="https://github.com/listinc/juso-ontology/tree/master/kr">the GitHub
+      repository</a> so others can contribute edits and improvements.
+    </div>
+    </p><p class="comment">
+    Most of the descriptions given here are from Wikipedia or from the related
+    ontologies and vocabularies.
+    </p><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://rdfs.co/juso/kr/</code></pre><p>
+          When used in XML documents the suggested prefix is
+          <code>juso.kr</code>.
+        </p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://rdfs.co/juso/kr/administrative_building_number
+http://rdfs.co/juso/kr/AdministrativeCity</code></pre><h2 id="sec-groups">Terms Grouped by Theme</h2><ul class="groupList"><li><p class="definition"><strong>Address Terms:
+              </strong>
+     These classes and properties are used to describe addresses in South Korea.
+     </p><p><a href="#term-EastAsianAddress" title="">EastAsianAddress</a>, <a href="#term-Street" title="">Street</a>, <a href="#term-Road" title="">Road</a>, <a href="#term-road_name_number" title="">road_name_number</a>, <a href="#term-parent_road" title="">parent_road</a>, <a href="#term-Building" title="">Building</a>, <a href="#term-administrative_building_number" title="">administrative_building_number</a>, <a href="#term-MultiFamilyResidentialBuilding" title="">MultiFamilyResidentialBuilding</a>, <a href="#term-PostalCode1970" title="">PostalCode1970</a>, <a href="#term-PostalCode1988" title="">PostalCode1988</a>, <a href="#term-PostalCode2015" title="">PostalCode2015</a>, <a href="#term-RoadNameAddress" title="">RoadNameAddress</a>, <a href="#term-landform" title="">landform</a>, <a href="#term-floor" title="">floor</a>, <a href="#term-building_number" title="">building_number</a>, <a href="#term-building_extra_number" title="">building_extra_number</a>, <a href="#term-eup_myeon_dong_serial_number" title="">eup_myeon_dong_serial_number</a>, <a href="#term-si_do" title="">si_do</a>, <a href="#term-si_gun_gu" title="">si_gun_gu</a>, <a href="#term-eup_myeon_dong" title="">eup_myeon_dong</a>, <a href="#term-ri" title="">ri</a>, <a href="#term-beonji" title="">beonji</a>, <a href="#term-ho" title="">ho</a> and <a href="#term-Boulevard" title="">Boulevard</a></p></li><li><p class="definition"><strong>Administrative Division Terms:
+              </strong>
+    These classes and properties are used to describe administrative divisions
+    in South Korea.    
+    </p><p><a href="#term-RegionalLocalGovernment" title="">RegionalLocalGovernment</a>, <a href="#term-AdministrativeCity" title="">AdministrativeCity</a>, <a href="#term-County" title="">County</a>, <a href="#term-AutonomousDistrict" title="">AutonomousDistrict</a>, <a href="#term-NonAutonomousDistrict" title="">NonAutonomousDistrict</a>, <a href="#term-si_gun_gu_code" title="">si_gun_gu_code</a>, <a href="#term-Town" title="">Town</a>, <a href="#term-Township" title="">Township</a>, <a href="#term-LegalStatusNeighborhood" title="">LegalStatusNeighborhood</a>, <a href="#term-legal_status_neighborhood_code" title="">legal_status_neighborhood_code</a>, <a href="#term-AdministrativeNeighborhood" title="">AdministrativeNeighborhood</a>, <a href="#term-Province" title="">Province</a>, <a href="#term-administrative_neighborhood_code" title="">administrative_neighborhood_code</a>, <a href="#term-eup_myeon_dong_code" title="">eup_myeon_dong_code</a>, <a href="#term-LegalStatusVillage" title="">LegalStatusVillage</a>, <a href="#term-AdministrativeVillage" title="">AdministrativeVillage</a>, <a href="#term-SpecialAutonomousProvince" title="">SpecialAutonomousProvince</a>, <a href="#term-SpecialCity" title="">SpecialCity</a>, <a href="#term-MetropolitanCity" title="">MetropolitanCity</a>, <a href="#term-MetropolitanAutonomousCity" title="">MetropolitanAutonomousCity</a>, <a href="#term-BasicLocalGovernment" title="">BasicLocalGovernment</a>, <a href="#term-City" title="">City</a> and <a href="#term-SpecificCity" title="">SpecificCity</a></p></li></ul><h2 id="sec-terms">Summary of Terms</h2><p>
+      This vocabulary defines
+      29 classes
+        
+      and
+      18 properties.
+        </p><table><thead><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr></thead><tbody><tr><td><a href="#term-AdministrativeCity" title="http://rdfs.co/juso/kr/AdministrativeCity">AdministrativeCity</a></td><td><em>class</em></td><td>
+    An Administrative city is a type of municipal city that are created in 1
+    July 2006 after the 2005 referendum in Jeju and the province was given
+    extensive administrative powers that had previously been reserved for the
+    central government.
+    </td></tr><tr><td><a href="#term-AdministrativeNeighborhood" title="http://rdfs.co/juso/kr/AdministrativeNeighborhood">AdministrativeNeighborhood</a></td><td><em>class</em></td><td>
+    An administrative neighborhood is the smallest level of urban government to
+    have its own office and staff in South Korea.
+    </td></tr><tr><td><a href="#term-AdministrativeVillage" title="http://rdfs.co/juso/kr/AdministrativeVillage">AdministrativeVillage</a></td><td><em>class</em></td><td>
+    A administrative village is an administrative unit in South Korea.
+    </td></tr><tr><td><a href="#term-AutonomousDistrict" title="http://rdfs.co/juso/kr/AutonomousDistrict">AutonomousDistrict</a></td><td><em>class</em></td><td>
+    An autonomous district of special and metropolitan cities is a municipal
+    entity similar to a city with its own mayor along with its own
+    legislative council.
+    </td></tr><tr><td><a href="#term-BasicLocalGovernment" title="http://rdfs.co/juso/kr/BasicLocalGovernment">BasicLocalGovernment</a></td><td><em>class</em></td><td>
+    Basic local governments are the municipal-level administrative division
+    within South Korea.
+    </td></tr><tr><td><a href="#term-Boulevard" title="http://rdfs.co/juso/kr/Boulevard">Boulevard</a></td><td><em>class</em></td><td>
+    In the Road Name Address system, the word boulevard (daero) is used to
+    describe two-way roads that have more than 40m width or 8 lanes.
+    </td></tr><tr><td><a href="#term-Building" title="http://rdfs.co/juso/kr/Building">Building</a></td><td><em>class</em></td><td>
+    A building is a man-made structure with a roof and walls standing more or
+    less permanently in one place, such as a house or factory.
+    </td></tr><tr><td><a href="#term-City" title="http://rdfs.co/juso/kr/City">City</a></td><td><em>class</em></td><td>
+    A city is a municipal administrative unit in South Korea.
+    </td></tr><tr><td><a href="#term-County" title="http://rdfs.co/juso/kr/County">County</a></td><td><em>class</em></td><td>
+    A county is an administrative unit in South Korea similar.
+    </td></tr><tr><td><a href="#term-EastAsianAddress" title="http://rdfs.co/juso/kr/EastAsianAddress">EastAsianAddress</a></td><td><em>class</em></td><td>
+    The previous addressing system used in South Korea was the the East Asian
+    system, which is also used in Japan and North Korea (but not within the
+      Chinese-speaking world), but although still commonly used, is no longer
+    officially recognized since December 31, 2013.
+    </td></tr><tr><td><a href="#term-LegalStatusNeighborhood" title="http://rdfs.co/juso/kr/LegalStatusNeighborhood">LegalStatusNeighborhood</a></td><td><em>class</em></td><td>
+    A legal-status neighborhood is a submunicipal level administrative unit of
+    a city and of those cities which are not divided into districts throughout
+    Korea.
+    </td></tr><tr><td><a href="#term-LegalStatusVillage" title="http://rdfs.co/juso/kr/LegalStatusVillage">LegalStatusVillage</a></td><td><em>class</em></td><td>
+    A legal-status village is an administrative unit in South Korea.
+    </td></tr><tr><td><a href="#term-MetropolitanAutonomousCity" title="http://rdfs.co/juso/kr/MetropolitanAutonomousCity">MetropolitanAutonomousCity</a></td><td><em>class</em></td><td>
+    In early 2007, the South Korean government created a special administrative
+    district from parts of South Chungcheong and North Chungcheong provinces,
+    near Daejeon, to relocate nine ministries and four national agencies from
+    Seoul.
+    </td></tr><tr><td><a href="#term-MetropolitanCity" title="http://rdfs.co/juso/kr/MetropolitanCity">MetropolitanCity</a></td><td><em>class</em></td><td>
+    Metropolitan cities are the highest-ranked administrative divisions in
+    South Korea.
+    </td></tr><tr><td><a href="#term-MultiFamilyResidentialBuilding" title="http://rdfs.co/juso/kr/MultiFamilyResidentialBuilding">MultiFamilyResidentialBuilding</a></td><td><em>class</em></td><td>
+    A multifamily residential building is a building that contain multiple
+    separate housing units for residential inhabitants.
+    </td></tr><tr><td><a href="#term-NonAutonomousDistrict" title="http://rdfs.co/juso/kr/NonAutonomousDistrict">NonAutonomousDistrict</a></td><td><em>class</em></td><td>
+    Cities with over 500,000 people are allowed to have non-autonomous
+    districts (notable exceptions to this rule are the cities of Gimhae,
+    Hwaseong, and Namyangju).
+    </td></tr><tr><td><a href="#term-PostalCode1970" title="http://rdfs.co/juso/kr/PostalCode1970">PostalCode1970</a></td><td><em>class</em></td><td>
+    1970년 7월 1일에 도입되어 1988년 1월 31일까지 사용된 대한민국 최초의 5자리 우편번호.
+    </td></tr><tr><td><a href="#term-PostalCode1988" title="http://rdfs.co/juso/kr/PostalCode1988">PostalCode1988</a></td><td><em>class</em></td><td>
+    1988년 2월 1일에 도입되어 2015년 7월 31일까지 사용된 대한민국의 6자리 우편번호.
+    </td></tr><tr><td><a href="#term-PostalCode2015" title="http://rdfs.co/juso/kr/PostalCode2015">PostalCode2015</a></td><td><em>class</em></td><td>
+    2015년 8월 1일에 도입된 도로명주소 체계 기반 5자리 대한민국 우편번호.
+    </td></tr><tr><td><a href="#term-Province" title="http://rdfs.co/juso/kr/Province">Province</a></td><td><em>class</em></td><td>
+    A province are the highest-ranked administrative divisions in South Korea.
+    </td></tr><tr><td><a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">RegionalLocalGovernment</a></td><td><em>class</em></td><td>
+    Regional local governments are the highest-ranked administrative division
+    within South Korea.
+    </td></tr><tr><td><a href="#term-Road" title="http://rdfs.co/juso/kr/Road">Road</a></td><td><em>class</em></td><td>
+    In the Road Name Address system, the word road (gil) is used to describe
+    roads that have less than 12m width or 2 lanes.
+    width or 2 lanes.
+    </td></tr><tr><td><a href="#term-RoadNameAddress" title="http://rdfs.co/juso/kr/RoadNameAddress">RoadNameAddress</a></td><td><em>class</em></td><td>
+    The Road Name Address system, rolled out on January 1, 2014, uses street
+    names and house numbers, and is similar to the systems used by the United
+    States, Canada, and Europe.
+    </td></tr><tr><td><a href="#term-SpecialAutonomousProvince" title="http://rdfs.co/juso/kr/SpecialAutonomousProvince">SpecialAutonomousProvince</a></td><td><em>class</em></td><td>
+    A special autonomous province is a province with more autonomy over its
+    economy and more powers are given to the provincial government.
+    </td></tr><tr><td><a href="#term-SpecialCity" title="http://rdfs.co/juso/kr/SpecialCity">SpecialCity</a></td><td><em>class</em></td><td>
+    Seoul was designated a "special free city" separate from Gyeonggi Province
+    on August 15, 1946; it became a "special city" on August 15, 1949.
+    </td></tr><tr><td><a href="#term-SpecificCity" title="http://rdfs.co/juso/kr/SpecificCity">SpecificCity</a></td><td><em>class</em></td><td>
+    A Specific city is a municipal city that has a population greater than
+    500,000 and has been designated as such by an order of the National
+    Government under Article 175 of the Local Autonomy Law.
+    </td></tr><tr><td><a href="#term-Street" title="http://rdfs.co/juso/kr/Street">Street</a></td><td><em>class</em></td><td>
+    In the Road Name Address system, the word street (ro) is used to
+    describe two-way roads that are narrower than roads but have more than 12m
+    width or 2 lanes.
+    </td></tr><tr><td><a href="#term-Town" title="http://rdfs.co/juso/kr/Town">Town</a></td><td><em>class</em></td><td>
+    A town is an administrative unit in South Korea.
+    </td></tr><tr><td><a href="#term-Township" title="http://rdfs.co/juso/kr/Township">Township</a></td><td><em>class</em></td><td>
+    A township is an administrative unit in South Korea.
+    </td></tr><tr><td><a href="#term-administrative_building_number" title="http://rdfs.co/juso/kr/administrative_building_number">administrative_building_number</a></td><td><em>property</em></td><td>
+    Each building is given a number for administration.
+    </td></tr><tr><td><a href="#term-administrative_neighborhood_code" title="http://rdfs.co/juso/kr/administrative_neighborhood_code">administrative_neighborhood_code</a></td><td><em>property</em></td><td>
+    The unique administrative code for the administrative neighborhood.
+    </td></tr><tr><td><a href="#term-beonji" title="http://rdfs.co/juso/kr/beonji">beonji</a></td><td><em>property</em></td><td>
+    Each neighborhood is divided into city blocks (beonji), which can range
+    from several dozen to several thousand per neighborhood.
+    </td></tr><tr><td><a href="#term-building_extra_number" title="http://rdfs.co/juso/kr/building_extra_number">building_extra_number</a></td><td><em>property</em></td><td>
+    Buildings on a street or alley that is too small or too short to receive
+    a name of its own share the same building number, followed by a hyphen,
+    followed by a unique extra number afterwards.
+    </td></tr><tr><td><a href="#term-building_number" title="http://rdfs.co/juso/kr/building_number">building_number</a></td><td><em>property</em></td><td>
+    Buildings are numbered along a street with even numbers on one side and odd
+    numbers on the other, as in most European countries.
+    </td></tr><tr><td><a href="#term-eup_myeon_dong" title="http://rdfs.co/juso/kr/eup_myeon_dong">eup_myeon_dong</a></td><td><em>property</em></td><td>
+    The third-level administrative division of the address in South Korea,
+    one of the four types of submunicipal-level divisions: towns (eup),
+    townships (myeon), legal-status neighborhoods (beopjeongdong), and
+    administrative neighborhoods (haengjeongdong).
+    </td></tr><tr><td><a href="#term-eup_myeon_dong_code" title="http://rdfs.co/juso/kr/eup_myeon_dong_code">eup_myeon_dong_code</a></td><td><em>property</em></td><td>
+    Each of towns (eup), townships (myeon), or neighborhoods (dong) is given a
+    3-number code.
+    </td></tr><tr><td><a href="#term-eup_myeon_dong_serial_number" title="http://rdfs.co/juso/kr/eup_myeon_dong_serial_number">eup_myeon_dong_serial_number</a></td><td><em>property</em></td><td>
+    A serial number for town, township, or neighborhood to distinguish
+    addresses that share the same code for city, county, or district, and
+    the same road name number.
+    </td></tr><tr><td><a href="#term-floor" title="http://rdfs.co/juso/kr/floor">floor</a></td><td><em>property</em></td><td>
+    Whether the address locates a place on the ground, under the ground, or in
+    the air.
+    </td></tr><tr><td><a href="#term-ho" title="http://rdfs.co/juso/kr/ho">ho</a></td><td><em>property</em></td><td>
+    The building itself is given a house number (ho) within the city block.
+    </td></tr><tr><td><a href="#term-landform" title="http://rdfs.co/juso/kr/landform">landform</a></td><td><em>property</em></td><td>
+    Whether the address locates a land lot or a mountain.
+    </td></tr><tr><td><a href="#term-legal_status_neighborhood_code" title="http://rdfs.co/juso/kr/legal_status_neighborhood_code">legal_status_neighborhood_code</a></td><td><em>property</em></td><td>
+    The unique administrative code for the legal-status neighborhood.
+    </td></tr><tr><td><a href="#term-parent_road" title="http://rdfs.co/juso/kr/parent_road">parent_road</a></td><td><em>property</em></td><td>
+    A boulevard, street, or road that is a direct parent of the current one.
+    </td></tr><tr><td><a href="#term-ri" title="http://rdfs.co/juso/kr/ri">ri</a></td><td><em>property</em></td><td>
+    A legal-status village (beopjeongri) or administrative village
+    (haengjeongri) for the fourth-level administrative division of the address
+    in South Korea.
+    </td></tr><tr><td><a href="#term-road_name_number" title="http://rdfs.co/juso/kr/road_name_number">road_name_number</a></td><td><em>property</em></td><td>
+    Each of boulevards, streets, or roads is given a 7-number code.
+    </td></tr><tr><td><a href="#term-si_do" title="http://rdfs.co/juso/kr/si_do">si_do</a></td><td><em>property</em></td><td>
+    The top tier of administrative division of the address in South Korea,
+    one of the five types of provincial-level divisions: provinces (do),
+    special autonomous provinces (teukbyeol-jachido), special cities
+    (teukbyeolsi), metropolitan cities (gwangyeoksi) and metropolitan
+    autonomous cities (teukbyeol-jachisi).
+    </td></tr><tr><td><a href="#term-si_gun_gu" title="http://rdfs.co/juso/kr/si_gun_gu">si_gun_gu</a></td><td><em>property</em></td><td>
+    The second-level administrative division of the address in South Korea,
+    one of the six types of municipal-level divisions: cities (si), specific
+    cities (teukjeongsi), administrative cities (haengjeongsi), county (gun),
+    autonomous districts (jachigu), and non-autonomous districts (ilbangu).
+    </td></tr><tr><td><a href="#term-si_gun_gu_code" title="http://rdfs.co/juso/kr/si_gun_gu_code">si_gun_gu_code</a></td><td><em>property</em></td><td>
+    Each of cities (si), counties (gun), or districts (gu) is given a 5-number
+    code.
+    </td></tr></tbody></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-AdministrativeCity">Class: AdministrativeCity</h3><div class="description"><p class="definition"><strong>Definition:</strong> An Administrative city is a type of municipal city that are created in 1 July 2006 after the 2005 referendum in Jeju and the province was given extensive administrative powers that had previously been reserved for the central government.<span class="lang">@en</span><br/>행정시(行政市)는 대한민국의 행정 구역 중 하나로, 지방자치법 시행 이후 기초자치단체인 자치시로 전환되면서 사실상 행정시의 기능은 완전히 사라졌다가 특별자치도 제도의 도입으로 제주특별자치도가 2006년 7월 1일 출범하면서 행정시가 다시 나타났다.<span class="lang">@ko</span></p><p class="comment">
+    Since Jeju was given more autonomy, cities in Jeju could not be defined by
+    the Local Autonomy Law so this new class of city was created for Jeju.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/AdministrativeCity</td></tr><tr><th>Preferred Label:</th><td>Administrative City<span class="lang">@en</span> and 행정시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/City">juso:City</a> and <a href="http://rdfs.co/juso/SecondLevelAdministrativeDivision">juso:SecondLevelAdministrativeDivision</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-City" title="http://rdfs.co/juso/kr/City">juso.kr:City</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Cities_of_South_Korea">https://en.wikipedia.org/wiki/Cities_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/행정시">https://ko.wikipedia.org/wiki/행정시</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-AdministrativeNeighborhood">Class: AdministrativeNeighborhood</h3><div class="description"><p class="definition"><strong>Definition:</strong> An administrative neighborhood is the smallest level of urban government to have its own office and staff in South Korea.<span class="lang">@en</span><br/>행정동(行政洞)은 대한민국의 행정 구역의 하나로 구 또는 시의 하부 행정 구역이다.<span class="lang">@ko</span></p><p class="comment">
+    In some cases, a single legal-status neighborhood is divided into several
+    administrative neighborhoods. In such cases, each administrative dong has
+    its own office and staff.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/AdministrativeNeighborhood</td></tr><tr><th>Preferred Label:</th><td>Administrative Neighborhood<span class="lang">@en</span> and 행정동<span class="lang">@ko</span></td></tr><tr><th>Properties include:</th><td><a href="#term-administrative_neighborhood_code" title="http://rdfs.co/juso/kr/administrative_neighborhood_code">juso.kr:administrative_neighborhood_code</a></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Neighborhood">juso:Neighborhood</a> and <a href="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">juso:ThirdLevelAdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Dong_(administrative_division)">https://en.wikipedia.org/wiki/Dong_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/동_(행정_구역)">https://ko.wikipedia.org/wiki/동_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-AdministrativeVillage">Class: AdministrativeVillage</h3><div class="description"><p class="definition"><strong>Definition:</strong> A administrative village is an administrative unit in South Korea.<span class="lang">@en</span><br/>대한민국의 리(里)는 읍(邑)·면(面)의 하부 행정 구역이며, 행정리(行政里)는 인구와 생활권을 고려하여 법정리에 1개 또는 여러 개로 설치한 행정 구역이다.<span class="lang">@ko</span></p><p class="comment">
+    A legal-status village can be subdivided into one or more administrative
+    villages.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/AdministrativeVillage</td></tr><tr><th>Preferred Label:</th><td>Administrative Village<span class="lang">@en</span> and 행정리<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/FourthLevelAdministrativeDivision">juso:FourthLevelAdministrativeDivision</a> and <a href="http://rdfs.co/juso/Village">juso:Village</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Ri_(administrative_division)">https://en.wikipedia.org/wiki/Ri_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/리_(행정_구역)">https://ko.wikipedia.org/wiki/리_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-AutonomousDistrict">Class: AutonomousDistrict</h3><div class="description"><p class="definition"><strong>Definition:</strong> An autonomous district of special and metropolitan cities is a municipal entity similar to a city with its own mayor along with its own legislative council.<span class="lang">@en</span><br/>자치구(自治區)는 특별시, 광역시의 하위 행정 구역으로서 시, 군과 동급인 기초자치단체이다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/AutonomousDistrict</td></tr><tr><th>Preferred Label:</th><td>Autonomous District<span class="lang">@en</span> and 자치구<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/District">juso:District</a> and <a href="#term-BasicLocalGovernment" title="http://rdfs.co/juso/kr/BasicLocalGovernment">juso.kr:BasicLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-NonAutonomousDistrict" title="http://rdfs.co/juso/kr/NonAutonomousDistrict">juso.kr:NonAutonomousDistrict</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Gu_(administrative_division)">https://en.wikipedia.org/wiki/Gu_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/구_(행정_구역)">https://ko.wikipedia.org/wiki/구_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-BasicLocalGovernment">Class: BasicLocalGovernment</h3><div class="description"><p class="definition"><strong>Definition:</strong> Basic local governments are the municipal-level administrative division within South Korea.<span class="lang">@en</span><br/>대한민국의 기초지방자치단체(基礎地方自治團體)는 지방자치단체에서 광역지방자치단체의 하부의 조직으로서 광역지방자치단체보다 좁은 지역을 관할하는 지방 행정 조직이다.<span class="lang">@ko</span></p><p class="comment">
+    Non-autonomous districts of municipal cities and administrative cities in
+    Jeju are not basic local governments.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/BasicLocalGovernment</td></tr><tr><th>Preferred Label:</th><td>Basic Local Government<span class="lang">@en</span> and 기초지방자치단체<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Lower-level Local Autonomy<span class="lang">@en</span>, Municipal Government<span class="lang">@en</span> and Municipality<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/SecondLevelAdministrativeDivision">juso:SecondLevelAdministrativeDivision</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Administrative_divisions_of_South_Korea">https://en.wikipedia.org/wiki/Administrative_divisions_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/기초지방자치단체">https://ko.wikipedia.org/wiki/기초지방자치단체</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Boulevard">Class: Boulevard</h3><div class="description"><p class="definition"><strong>Definition:</strong> In the Road Name Address system, the word boulevard (daero) is used to describe two-way roads that have more than 40m width or 8 lanes.<span class="lang">@en</span><br/>도로명주소에서 대로(大路)는 폭이 40m 이상이거나 왕복 8차선 이상의 도로를 의미한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Boulevard</td></tr><tr><th>Preferred Label:</th><td>Boulevard<span class="lang">@en</span> and 대로<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Street">juso:Street</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Building">Class: Building</h3><div class="description"><p class="definition"><strong>Definition:</strong> A building is a man-made structure with a roof and walls standing more or less permanently in one place, such as a house or factory.<span class="lang">@en</span><br/>일반적으로 건물(建物)이란 일정 기간 동안 그 형상이 필요하기 때문에, 혹은 그것이 제공하는 공간이 필요하기 때문에, 인간이 지은 지면에 고정되는 구조물을 뜻한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Building</td></tr><tr><th>Preferred Label:</th><td>Building<span class="lang">@en</span> and 건물<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>건축물<span class="lang">@ko</span> and 구축물<span class="lang">@ko</span></td></tr><tr><th>Properties include:</th><td><a href="#term-administrative_building_number" title="http://rdfs.co/juso/kr/administrative_building_number">juso.kr:administrative_building_number</a></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Feature">juso:Feature</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Building">https://en.wikipedia.org/wiki/Building</a> and <a href="https://ko.wikipedia.org/wiki/건축물">https://ko.wikipedia.org/wiki/건축물</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-City">Class: City</h3><div class="description"><p class="definition"><strong>Definition:</strong> A city is a municipal administrative unit in South Korea.<span class="lang">@en</span><br/>시(市)는 대한민국 행정 구역의 하나로 행정시와 달리 기초지방자치단체에 해당한다.<span class="lang">@ko</span></p><p class="comment">
+    Cities are ranked on the same level as county and autonomous district.
+  </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/City</td></tr><tr><th>Preferred Label:</th><td>City<span class="lang">@en</span> and 시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/City">juso:City</a> and <a href="#term-BasicLocalGovernment" title="http://rdfs.co/juso/kr/BasicLocalGovernment">juso.kr:BasicLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-AdministrativeCity" title="http://rdfs.co/juso/kr/AdministrativeCity">juso.kr:AdministrativeCity</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Cities_of_South_Korea">https://en.wikipedia.org/wiki/Cities_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/시_(행정_구역)">https://ko.wikipedia.org/wiki/시_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-County">Class: County</h3><div class="description"><p class="definition"><strong>Definition:</strong> A county is an administrative unit in South Korea similar.<span class="lang">@en</span><br/>군(郡)은 행정 구역의 하나로, 대한민국의 군은 도 및 광역시의 하부 행정 구역이자 기초지방자치단체이다.<span class="lang">@ko</span></p><p class="comment">
+    In South Korea, a county has a population of less than 150,000 (more than
+    that would make it a city), is less densely populated than a district, and
+    is more rural in character than either of the other 2 divisions.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/County</td></tr><tr><th>Preferred Label:</th><td>County<span class="lang">@en</span> and 군<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/County">juso:County</a> and <a href="#term-BasicLocalGovernment" title="http://rdfs.co/juso/kr/BasicLocalGovernment">juso.kr:BasicLocalGovernment</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Gun_(administrative_division)">https://en.wikipedia.org/wiki/Gun_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/군_(행정_구역)">https://ko.wikipedia.org/wiki/군_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-EastAsianAddress">Class: EastAsianAddress</h3><div class="description"><p class="definition"><strong>Definition:</strong> The previous addressing system used in South Korea was the the East Asian system, which is also used in Japan and North Korea (but not within the Chinese-speaking world), but although still commonly used, is no longer officially recognized since December 31, 2013.<span class="lang">@en</span><br/>기존 대한민국에서 사용되던 지번 주소 체계는 토지 구획을 정리한 지번을 구분자로 이용하는 주소 체계로 아직 널리 사용되고 있으나 2014년 1월 1일부터 도로명주소로 대체되어 공식적으로 폐지되었다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/EastAsianAddress</td></tr><tr><th>Preferred Label:</th><td>East Asian Address<span class="lang">@en</span> and 지번 주소<span class="lang">@ko</span></td></tr><tr><th>Properties include:</th><td><a href="#term-beonji" title="http://rdfs.co/juso/kr/beonji">juso.kr:beonji</a> and <a href="#term-ho" title="http://rdfs.co/juso/kr/ho">juso.kr:ho</a></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Addresses_in_South_Korea">https://en.wikipedia.org/wiki/Addresses_in_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-LegalStatusNeighborhood">Class: LegalStatusNeighborhood</h3><div class="description"><p class="definition"><strong>Definition:</strong> A legal-status neighborhood is a submunicipal level administrative unit of a city and of those cities which are not divided into districts throughout Korea.<span class="lang">@en</span><br/>법정동(法定洞)은 대한민국 법정 구역으로, 법률(관습법)로 지정된 일정한 명칭과 영역을 지닌 구역이다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/LegalStatusNeighborhood</td></tr><tr><th>Preferred Label:</th><td>Legal-status Neighborhood<span class="lang">@en</span> and 법정동<span class="lang">@ko</span></td></tr><tr><th>Properties include:</th><td><a href="#term-legal_status_neighborhood_code" title="http://rdfs.co/juso/kr/legal_status_neighborhood_code">juso.kr:legal_status_neighborhood_code</a></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Neighborhood">juso:Neighborhood</a> and <a href="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">juso:ThirdLevelAdministrativeDivision</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Dong_(administrative_division)">https://en.wikipedia.org/wiki/Dong_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/법정동">https://ko.wikipedia.org/wiki/법정동</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-LegalStatusVillage">Class: LegalStatusVillage</h3><div class="description"><p class="definition"><strong>Definition:</strong> A legal-status village is an administrative unit in South Korea.<span class="lang">@en</span><br/>대한민국의 리(里)는 읍(邑)·면(面)의 하부 행정 구역이며, 법정리(法定里)는 법령으로 정하여진 리로 지번의 기준이 된다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/LegalStatusVillage</td></tr><tr><th>Preferred Label:</th><td>Legal-status Village<span class="lang">@en</span> and 법정리<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/FourthLevelAdministrativeDivision">juso:FourthLevelAdministrativeDivision</a> and <a href="http://rdfs.co/juso/Village">juso:Village</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Ri_(administrative_division)">https://en.wikipedia.org/wiki/Ri_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/리_(행정_구역)">https://ko.wikipedia.org/wiki/리_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-MetropolitanAutonomousCity">Class: MetropolitanAutonomousCity</h3><div class="description"><p class="definition"><strong>Definition:</strong> In early 2007, the South Korean government created a special administrative district from parts of South Chungcheong and North Chungcheong provinces, near Daejeon, to relocate nine ministries and four national agencies from Seoul.<span class="lang">@en</span><br/>특별자치시(特別自治市)는 대한민국의 행정 구역이다.<span class="lang">@ko</span></p><p class="comment">
+    The only metropolitan autonomous city in South Korea called Sejong opened 2
+    July 2012.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/MetropolitanAutonomousCity</td></tr><tr><th>Preferred Label:</th><td>Metropolitan Autonomous City<span class="lang">@en</span> and 특별자치시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/City">juso:City</a> and <a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-MetropolitanCity" title="http://rdfs.co/juso/kr/MetropolitanCity">juso.kr:MetropolitanCity</a> and <a href="#term-SpecialCity" title="http://rdfs.co/juso/kr/SpecialCity">juso.kr:SpecialCity</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Special_cities_of_South_Korea">https://en.wikipedia.org/wiki/Special_cities_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/특별자치시">https://ko.wikipedia.org/wiki/특별자치시</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-MetropolitanCity">Class: MetropolitanCity</h3><div class="description"><p class="definition"><strong>Definition:</strong> Metropolitan cities are the highest-ranked administrative divisions in South Korea.<span class="lang">@en</span><br/>광역시(廣域市)는 대한민국의 행정 구역이다.<span class="lang">@ko</span></p><p class="comment">
+    They were called "directly-administered city" before 1995. These cities
+    have equal status to the provinces.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/MetropolitanCity</td></tr><tr><th>Preferred Label:</th><td>Metropolitan City<span class="lang">@en</span> and 광역시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/City">juso:City</a> and <a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-MetropolitanAutonomousCity" title="http://rdfs.co/juso/kr/MetropolitanAutonomousCity">juso.kr:MetropolitanAutonomousCity</a> and <a href="#term-SpecialCity" title="http://rdfs.co/juso/kr/SpecialCity">juso.kr:SpecialCity</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Special_cities_of_South_Korea">https://en.wikipedia.org/wiki/Special_cities_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/광역시">https://ko.wikipedia.org/wiki/광역시</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-MultiFamilyResidentialBuilding">Class: MultiFamilyResidentialBuilding</h3><div class="description"><p class="definition"><strong>Definition:</strong> A multifamily residential building is a building that contain multiple separate housing units for residential inhabitants.<span class="lang">@en</span><br/>공동 주택(共同住宅)은 하나의 건물 내에 서로 독립적인 여러 세대가 공동으로 거주하는 주거의 형태이다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/MultiFamilyResidentialBuilding</td></tr><tr><th>Preferred Label:</th><td>Multi-family Residential Building<span class="lang">@en</span> and 공동 주택<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>MDU Building<span class="lang">@en</span> and Multi-dwelling Unit Building<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-Building" title="http://rdfs.co/juso/kr/Building">juso.kr:Building</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Multi-family_residential">https://en.wikipedia.org/wiki/Multi-family_residential</a> and <a href="https://ko.wikipedia.org/wiki/공동_주택">https://ko.wikipedia.org/wiki/공동_주택</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-NonAutonomousDistrict">Class: NonAutonomousDistrict</h3><div class="description"><p class="definition"><strong>Definition:</strong> Cities with over 500,000 people are allowed to have non-autonomous districts (notable exceptions to this rule are the cities of Gimhae, Hwaseong, and Namyangju).<span class="lang">@en</span><br/>자치구가 아닌 일반구(一般區)는 인구 50만 명 이상인 시(기초자치단체)의 하위 행정 구역이다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/NonAutonomousDistrict</td></tr><tr><th>Preferred Label:</th><td>Non-autonomous District<span class="lang">@en</span> and 일반구<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Administrative District<span class="lang">@en</span> and 행정구<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/District">juso:District</a> and <a href="http://rdfs.co/juso/SecondLevelAdministrativeDivision">juso:SecondLevelAdministrativeDivision</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-AutonomousDistrict" title="http://rdfs.co/juso/kr/AutonomousDistrict">juso.kr:AutonomousDistrict</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Gu_(administrative_division)">https://en.wikipedia.org/wiki/Gu_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/구_(행정_구역)">https://ko.wikipedia.org/wiki/구_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-PostalCode1970">Class: PostalCode1970</h3><div class="description"><p class="definition"><strong>Definition:</strong> 1970년 7월 1일에 도입되어 1988년 1월 31일까지 사용된 대한민국 최초의 5자리 우편번호.<span class="lang">@ko</span><br/>The first 5-digit postal code system in South Korea that was rolled out on July 1, 1970, and used until January 31, 1988.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/PostalCode1970</td></tr><tr><th>Preferred Label:</th><td>Postal Code (1970 - 1988)<span class="lang">@en</span> and 우편번호(1970 ~ 1988)<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/PostalCode">juso:PostalCode</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/List_of_postal_codes">https://en.wikipedia.org/wiki/List_of_postal_codes</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_우편번호">https://ko.wikipedia.org/wiki/대한민국의_우편번호</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-PostalCode1988">Class: PostalCode1988</h3><div class="description"><p class="definition"><strong>Definition:</strong> 1988년 2월 1일에 도입되어 2015년 7월 31일까지 사용된 대한민국의 6자리 우편번호.<span class="lang">@ko</span><br/>The 6-digit postal code system in South Korea that was rolled out on February 1, 1988, and used until July 31, 2015.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/PostalCode1988</td></tr><tr><th>Preferred Label:</th><td>Postal Code (1988 - 2015)<span class="lang">@en</span> and 우편번호(1988 ~ 2015)<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/PostalCode">juso:PostalCode</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/List_of_postal_codes">https://en.wikipedia.org/wiki/List_of_postal_codes</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_우편번호">https://ko.wikipedia.org/wiki/대한민국의_우편번호</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-PostalCode2015">Class: PostalCode2015</h3><div class="description"><p class="definition"><strong>Definition:</strong> 2015년 8월 1일에 도입된 도로명주소 체계 기반 5자리 대한민국 우편번호.<span class="lang">@ko</span><br/>The 5-digit postal code system based on the road name address system in South Korea, which has been rolled out on August 1, 2015.<span class="lang">@en</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/PostalCode2015</td></tr><tr><th>Preferred Label:</th><td>Postal Code (1988 - 2015)<span class="lang">@en</span> and 우편번호(1988 ~ 2015)<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/PostalCode">juso:PostalCode</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/List_of_postal_codes_in_South_Korea">https://en.wikipedia.org/wiki/List_of_postal_codes_in_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_우편번호">https://ko.wikipedia.org/wiki/대한민국의_우편번호</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Province">Class: Province</h3><div class="description"><p class="definition"><strong>Definition:</strong> A province are the highest-ranked administrative divisions in South Korea.<span class="lang">@en</span><br/>도(道)는 대한민국의 행정 구역 이름으로 특별자치도와 구분된다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Province</td></tr><tr><th>Preferred Label:</th><td>Province<span class="lang">@en</span> and 도<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>일반도<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Province">juso:Province</a> and <a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-SpecialAutonomousProvince" title="http://rdfs.co/juso/kr/SpecialAutonomousProvince">juso.kr:SpecialAutonomousProvince</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Provinces_of_South_Korea">https://en.wikipedia.org/wiki/Provinces_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/도_(행정_구역)">https://ko.wikipedia.org/wiki/도_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-RegionalLocalGovernment">Class: RegionalLocalGovernment</h3><div class="description"><p class="definition"><strong>Definition:</strong> Regional local governments are the highest-ranked administrative division within South Korea.<span class="lang">@en</span><br/>대한민국의 광역지방자치단체(廣域地方自治團體)는 지방자치단체 중 기초지방자치단체에 비해 넓은 구역과 많은 주민을 관할하는 기초지방자치단체 상위의 행정 구역이다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/RegionalLocalGovernment</td></tr><tr><th>Preferred Label:</th><td>Regional Local Government<span class="lang">@en</span> and 광역지방자치단체<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Metropolitan Government<span class="lang">@en</span> and Upper-level Local Autonomy<span class="lang">@en</span></td></tr><tr><th>Used with:</th><td><a href="#term-si_do" title="http://rdfs.co/juso/kr/si_do">juso.kr:si_do</a></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/FirstLevelAdministrativeDivision">juso:FirstLevelAdministrativeDivision</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-BasicLocalGovernment" title="http://rdfs.co/juso/kr/BasicLocalGovernment">juso.kr:BasicLocalGovernment</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Administrative_divisions_of_South_Korea">https://en.wikipedia.org/wiki/Administrative_divisions_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/광역자치단체">https://ko.wikipedia.org/wiki/광역자치단체</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Road">Class: Road</h3><div class="description"><p class="definition"><strong>Definition:</strong> In the Road Name Address system, the word road (gil) is used to describe roads that have less than 12m width or 2 lanes. width or 2 lanes.<span class="lang">@en</span><br/>도로명주소에서 길은 폭이 12m 미만이거나 2차로 미만인 도로를 의미한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Road</td></tr><tr><th>Preferred Label:</th><td>Road<span class="lang">@en</span> and 길<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Street">juso:Street</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-RoadNameAddress">Class: RoadNameAddress</h3><div class="description"><p class="definition"><strong>Definition:</strong> The Road Name Address system, rolled out on January 1, 2014, uses street names and house numbers, and is similar to the systems used by the United States, Canada, and Europe.<span class="lang">@en</span><br/>대한민국의 도로명주소란 부여된 도로명, 기초번호, 건물번호, 상세주소에 의하여 건물의 주소를 표기하는 방식으로 2014년부터 사용되고 있다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/RoadNameAddress</td></tr><tr><th>Preferred Label:</th><td>Road Name Address<span class="lang">@en</span> and 도로명주소<span class="lang">@ko</span></td></tr><tr><th>Properties include:</th><td><a href="#term-building_extra_number" title="http://rdfs.co/juso/kr/building_extra_number">juso.kr:building_extra_number</a>, <a href="#term-building_number" title="http://rdfs.co/juso/kr/building_number">juso.kr:building_number</a>, <a href="#term-eup_myeon_dong_serial_number" title="http://rdfs.co/juso/kr/eup_myeon_dong_serial_number">juso.kr:eup_myeon_dong_serial_number</a>, <a href="#term-floor" title="http://rdfs.co/juso/kr/floor">juso.kr:floor</a> and <a href="#term-landform" title="http://rdfs.co/juso/kr/landform">juso.kr:landform</a></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Address">juso:Address</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Addresses_in_South_Korea">https://en.wikipedia.org/wiki/Addresses_in_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Testing</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-SpecialAutonomousProvince">Class: SpecialAutonomousProvince</h3><div class="description"><p class="definition"><strong>Definition:</strong> A special autonomous province is a province with more autonomy over its economy and more powers are given to the provincial government.<span class="lang">@en</span><br/>특별자치도(特別自治道)는 대한민국의 행정 구역으로, 일반 도(道)와 기능적으로 거의 동일하지만, 관련 법률에 의거해 고도의 자치권이 보장된다.<span class="lang">@ko</span></p><p class="comment">
+    Jeju is the only special autonomous province in South Korea.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/SpecialAutonomousProvince</td></tr><tr><th>Preferred Label:</th><td>Special Autonomous Province<span class="lang">@en</span> and 특별자치도<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>Special Self-governing Province<span class="lang">@en</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Province">juso:Province</a> and <a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-Province" title="http://rdfs.co/juso/kr/Province">juso.kr:Province</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Provinces_of_South_Korea">https://en.wikipedia.org/wiki/Provinces_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/특별자치도">https://ko.wikipedia.org/wiki/특별자치도</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-SpecialCity">Class: SpecialCity</h3><div class="description"><p class="definition"><strong>Definition:</strong> Seoul was designated a "special free city" separate from Gyeonggi Province on August 15, 1946; it became a "special city" on August 15, 1949.<span class="lang">@en</span><br/>특별시(特別市)는 대한민국의 행정 구역으로 서울특별시가 유일하다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/SpecialCity</td></tr><tr><th>Preferred Label:</th><td>Special City<span class="lang">@en</span> and 특별시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/City">juso:City</a> and <a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>Disjoint with:</th><td><a href="#term-MetropolitanAutonomousCity" title="http://rdfs.co/juso/kr/MetropolitanAutonomousCity">juso.kr:MetropolitanAutonomousCity</a> and <a href="#term-MetropolitanCity" title="http://rdfs.co/juso/kr/MetropolitanCity">juso.kr:MetropolitanCity</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Special_cities_of_South_Korea">https://en.wikipedia.org/wiki/Special_cities_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/특별시">https://ko.wikipedia.org/wiki/특별시</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-SpecificCity">Class: SpecificCity</h3><div class="description"><p class="definition"><strong>Definition:</strong> A Specific city is a municipal city that has a population greater than 500,000 and has been designated as such by an order of the National Government under Article 175 of the Local Autonomy Law.<span class="lang">@en</span><br/>특정시(特定市)는 대한민국의 광역자치단체인 도에 소속된 기초자치단체 중 지방자치법 제175조에 따라 도지사의 권한 일부가 시장에게 위임된 시를 비공식적으로 일컫는 명칭으로 지방자치법에서는 이를 인구 50만 이상 대도시라고 규정하고 있다.<span class="lang">@ko</span></p><p class="comment">
+    Specific city are given powers to subdivide themselves into non-autonomous
+    districts but, not all Specific city are subdivided into non-autonomous
+    districts.
+  </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/SpecificCity</td></tr><tr><th>Preferred Label:</th><td>Specific City<span class="lang">@en</span> and 특정시<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="#term-City" title="http://rdfs.co/juso/kr/City">juso.kr:City</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Cities_of_South_Korea">https://en.wikipedia.org/wiki/Cities_of_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/특정시">https://ko.wikipedia.org/wiki/특정시</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Street">Class: Street</h3><div class="description"><p class="definition"><strong>Definition:</strong> In the Road Name Address system, the word street (ro) is used to describe two-way roads that are narrower than roads but have more than 12m width or 2 lanes.<span class="lang">@en</span><br/>도로명주소에서 로(路)는 대로보다 작지만 폭이 12m 이상이거나 왕복 2차선 이상의 도로를 의미한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Street</td></tr><tr><th>Preferred Label:</th><td>Street<span class="lang">@en</span> and 로<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/Street">juso:Street</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Town">Class: Town</h3><div class="description"><p class="definition"><strong>Definition:</strong> A town is an administrative unit in South Korea.<span class="lang">@en</span><br/>대한민국의 읍(邑)은 시·군·구의 하부 행정 구역이다.<span class="lang">@ko</span></p><p class="comment">
+    Along with "township", a town is one of the divisions of a county, and of
+    some cities with a population of less than 500,000. Towns are subdivided
+    into villages.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Town</td></tr><tr><th>Preferred Label:</th><td>Town<span class="lang">@en</span> and 읍<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">juso:ThirdLevelAdministrativeDivision</a> and <a href="http://rdfs.co/juso/Town">juso:Town</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Eup_(administrative_division)">https://en.wikipedia.org/wiki/Eup_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/읍">https://ko.wikipedia.org/wiki/읍</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="class"><h3 id="term-Township">Class: Township</h3><div class="description"><p class="definition"><strong>Definition:</strong> A township is an administrative unit in South Korea.<span class="lang">@en</span><br/>면(面)은 대한민국의 자치시·군 또는 행정시의 하부 행정 구역 이름이다.<span class="lang">@ko</span></p><p class="comment">
+    Along with town, township is of a county and some cities of fewer than
+    500,000 population. Townships have smaller populations than towns and
+    represent the rural areas of a county or city. Townships are subdivided
+    into villages.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/Township</td></tr><tr><th>Preferred Label:</th><td>Township<span class="lang">@en</span> and 면<span class="lang">@ko</span></td></tr><tr><th>Subclass of:</th><td><a href="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">juso:ThirdLevelAdministrativeDivision</a> and <a href="http://rdfs.co/juso/Township">juso:Township</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Myeon_(administrative_division)">https://en.wikipedia.org/wiki/Myeon_(administrative_division)</a> and <a href="https://ko.wikipedia.org/wiki/면_(행정_구역)">https://ko.wikipedia.org/wiki/면_(행정_구역)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-administrative_building_number">Property: administrative_building_number</h3><div class="description"><p class="definition"><strong>Definition:</strong> Each building is given a number for administration.<span class="lang">@en</span><br/>건물은 관리 번호를 부여 받는다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/administrative_building_number</td></tr><tr><th>Preferred Label:</th><td>administrative building number<span class="lang">@en</span> and 건물 관리 번호<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-Building" title="http://rdfs.co/juso/kr/Building">juso.kr:Building</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-administrative_neighborhood_code">Property: administrative_neighborhood_code</h3><div class="description"><p class="definition"><strong>Definition:</strong> The unique administrative code for the administrative neighborhood.<span class="lang">@en</span><br/>행정동에 부여된 행정 표준 코드.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/administrative_neighborhood_code</td></tr><tr><th>Preferred Label:</th><td>administrative neighborhood code<span class="lang">@en</span> and 행정동코드<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-AdministrativeNeighborhood" title="http://rdfs.co/juso/kr/AdministrativeNeighborhood">juso.kr:AdministrativeNeighborhood</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-beonji">Property: beonji</h3><div class="description"><p class="definition"><strong>Definition:</strong> Each neighborhood is divided into city blocks (beonji), which can range from several dozen to several thousand per neighborhood.<span class="lang">@en</span><br/>번지(番地)는 토지를 구획할 때 어떤 특정한 토지에 붙이는 번호를 의미하는 지번이다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/beonji</td></tr><tr><th>Preferred Label:</th><td>beonji<span class="lang">@en</span> and 번지<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-EastAsianAddress" title="http://rdfs.co/juso/kr/EastAsianAddress">juso.kr:EastAsianAddress</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/지번_(토지)">https://ko.wikipedia.org/wiki/지번_(토지)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-building_extra_number">Property: building_extra_number</h3><div class="description"><p class="definition"><strong>Definition:</strong> Buildings on a street or alley that is too small or too short to receive a name of its own share the same building number, followed by a hyphen, followed by a unique extra number afterwards.<span class="lang">@en</span><br/>건물 번호는 본 번과 부 번으로 구성되는데, 한 건물이 두 개의 도로와 인접해 있을 경우, 보다 넓은 도로로 건물 번호를 부여하고, 한 구간 내 여러 건물이 위치하고 있을 경우 -1, -2, -3처럼 부 번을 부여하여 본 번을 부여받은 건물과 구별한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/building_extra_number</td></tr><tr><th>Preferred Label:</th><td>building extra number<span class="lang">@en</span> and 건물 부 번호<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>건물 부 번<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-RoadNameAddress" title="http://rdfs.co/juso/kr/RoadNameAddress">juso.kr:RoadNameAddress</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://rdfs.co/juso/thoroughfare_address">juso:thoroughfare_address</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Addresses_in_South_Korea">https://en.wikipedia.org/wiki/Addresses_in_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-building_number">Property: building_number</h3><div class="description"><p class="definition"><strong>Definition:</strong> Buildings are numbered along a street with even numbers on one side and odd numbers on the other, as in most European countries.<span class="lang">@en</span><br/>건물 번호는 건물마다 부여된 번호로 건물번호 도로의 시작점으로부터 왼편에는 홀수를, 오른편에는 짝수를 대로(Boulevard) 및 로(Street)의 경우 매20미터마다, 길(Road)의 경우 매10미터마다 2씩 증가시키면서 부여한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/building_number</td></tr><tr><th>Preferred Label:</th><td>building number<span class="lang">@en</span> and 건물 번호<span class="lang">@ko</span></td></tr><tr><th>Alternate Label:</th><td>building main number<span class="lang">@en</span>, 건물 본 번<span class="lang">@ko</span> and 건물 본 번호<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-RoadNameAddress" title="http://rdfs.co/juso/kr/RoadNameAddress">juso.kr:RoadNameAddress</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://rdfs.co/juso/thoroughfare_address">juso:thoroughfare_address</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/Addresses_in_South_Korea">https://en.wikipedia.org/wiki/Addresses_in_South_Korea</a> and <a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-eup_myeon_dong">Property: eup_myeon_dong</h3><div class="description"><p class="definition"><strong>Definition:</strong> The third-level administrative division of the address in South Korea, one of the four types of submunicipal-level divisions: towns (eup), townships (myeon), legal-status neighborhoods (beopjeongdong), and administrative neighborhoods (haengjeongdong).<span class="lang">@en</span><br/>대한민국 주소의 읍면동급 행정 구역으로 읍, 면, 법정동, 행정동 중 하나에 해당한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/eup_myeon_dong</td></tr><tr><th>Preferred Label:</th><td>town, township, or neighborhood<span class="lang">@en</span> and 읍/면/동<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td>(composite term, see schema)</td></tr><tr><th>Subproperty of:</th><td><a href="http://rdfs.co/juso/third_level_administrative_division">juso:third_level_administrative_division</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-eup_myeon_dong_code">Property: eup_myeon_dong_code</h3><div class="description"><p class="definition"><strong>Definition:</strong> Each of towns (eup), townships (myeon), or neighborhoods (dong) is given a 3-number code.<span class="lang">@en</span><br/>읍, 면, 동은 3자리 코드를 부여 받는다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/eup_myeon_dong_code</td></tr><tr><th>Preferred Label:</th><td>code for town, township, neighborhood<span class="lang">@en</span> and 읍면동 코드<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-eup_myeon_dong_serial_number">Property: eup_myeon_dong_serial_number</h3><div class="description"><p class="definition"><strong>Definition:</strong> A serial number for town, township, or neighborhood to distinguish addresses that share the same code for city, county, or district, and the same road name number.<span class="lang">@en</span><br/>시군구 코드와 도로명 번호가 중복되는 주소를 구분하기 위한 읍면동 일련 번호.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/eup_myeon_dong_serial_number</td></tr><tr><th>Preferred Label:</th><td>serial number for town, township, or neighborhood<span class="lang">@en</span> and 읍면동 일련 번호<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-RoadNameAddress" title="http://rdfs.co/juso/kr/RoadNameAddress">juso.kr:RoadNameAddress</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-floor">Property: floor</h3><div class="description"><p class="definition"><strong>Definition:</strong> Whether the address locates a place on the ground, under the ground, or in the air.<span class="lang">@en</span><br/>주소가 가리키는 곳이 지상인지, 지하인지, 공중인지 여부.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/floor</td></tr><tr><th>Preferred Label:</th><td>floor<span class="lang">@en</span> and 층 구분<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-RoadNameAddress" title="http://rdfs.co/juso/kr/RoadNameAddress">juso.kr:RoadNameAddress</a></td></tr><tr><th>Range:</th><td>(composite term, see schema)</td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-ho">Property: ho</h3><div class="description"><p class="definition"><strong>Definition:</strong> The building itself is given a house number (ho) within the city block.<span class="lang">@en</span><br/>호(戶)는 건물에 부여된 각 번지 내 건물 번호이다.<span class="lang">@ko</span></p><p class="comment">
+    Usually, the words "번지" and "호" are not included in the written address;
+    instead, only their numbers, separated by a hyphen, are written.
+    </p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/ho</td></tr><tr><th>Preferred Label:</th><td>ho<span class="lang">@en</span> and 호<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-EastAsianAddress" title="http://rdfs.co/juso/kr/EastAsianAddress">juso.kr:EastAsianAddress</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>See Also:</th><td><a href="https://en.wikipedia.org/wiki/House_numbering">https://en.wikipedia.org/wiki/House_numbering</a> and <a href="https://ko.wikipedia.org/wiki/지번_(토지)">https://ko.wikipedia.org/wiki/지번_(토지)</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-landform">Property: landform</h3><div class="description"><p class="definition"><strong>Definition:</strong> Whether the address locates a land lot or a mountain.<span class="lang">@en</span><br/>주소 필지의 산 여부.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/landform</td></tr><tr><th>Preferred Label:</th><td>landform<span class="lang">@en</span> and 필지 구분<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-RoadNameAddress" title="http://rdfs.co/juso/kr/RoadNameAddress">juso.kr:RoadNameAddress</a></td></tr><tr><th>Range:</th><td>(composite term, see schema)</td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-legal_status_neighborhood_code">Property: legal_status_neighborhood_code</h3><div class="description"><p class="definition"><strong>Definition:</strong> The unique administrative code for the legal-status neighborhood.<span class="lang">@en</span><br/>법정동에 부여된 행정 표준 코드.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/legal_status_neighborhood_code</td></tr><tr><th>Preferred Label:</th><td>legal-status neighborhood code<span class="lang">@en</span> and 법정동코드<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td><a href="#term-LegalStatusNeighborhood" title="http://rdfs.co/juso/kr/LegalStatusNeighborhood">juso.kr:LegalStatusNeighborhood</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-parent_road">Property: parent_road</h3><div class="description"><p class="definition"><strong>Definition:</strong> A boulevard, street, or road that is a direct parent of the current one.<span class="lang">@en</span><br/>이 도로의 상위에 있는 대로, 로, 길.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/parent_road</td></tr><tr><th>Preferred Label:</th><td>parent boulevard, street, or road<span class="lang">@en</span> and 상위 도로<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td>(composite term, see schema)</td></tr><tr><th>Subproperty of:</th><td><a href="http://www.geonames.org/ontology#parentFeature">gn:parentFeature</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-ri">Property: ri</h3><div class="description"><p class="definition"><strong>Definition:</strong> A legal-status village (beopjeongri) or administrative village (haengjeongri) for the fourth-level administrative division of the address in South Korea.<span class="lang">@en</span><br/>대한민국 주소의 리통급 행정 구역 중 현재는 거의 사용되지 않는 통을 제외한 법정리 또는 행정리에 해당한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/ri</td></tr><tr><th>Preferred Label:</th><td>village<span class="lang">@en</span> and 리<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td>(composite term, see schema)</td></tr><tr><th>Subproperty of:</th><td><a href="http://rdfs.co/juso/fourth_level_administrative_division">juso:fourth_level_administrative_division</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-road_name_number">Property: road_name_number</h3><div class="description"><p class="definition"><strong>Definition:</strong> Each of boulevards, streets, or roads is given a 7-number code.<span class="lang">@en</span><br/>대로, 로, 길은 7자리 코드를 부여 받는다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/road_name_number</td></tr><tr><th>Preferred Label:</th><td>road name number<span class="lang">@en</span> and 도로명 번호<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-si_do">Property: si_do</h3><div class="description"><p class="definition"><strong>Definition:</strong> The top tier of administrative division of the address in South Korea, one of the five types of provincial-level divisions: provinces (do), special autonomous provinces (teukbyeol-jachido), special cities (teukbyeolsi), metropolitan cities (gwangyeoksi) and metropolitan autonomous cities (teukbyeol-jachisi).<span class="lang">@en</span><br/>대한민국 주소의 시도급 행정 구역으로 1개의 특별시, 6개의 광역시, 8개의 도, 1개의 특별자치시, 1개의 특별자치도 중 하나에 해당한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/si_do</td></tr><tr><th>Preferred Label:</th><td>city or province<span class="lang">@en</span> and 시/도<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td><a href="#term-RegionalLocalGovernment" title="http://rdfs.co/juso/kr/RegionalLocalGovernment">juso.kr:RegionalLocalGovernment</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://rdfs.co/juso/first_level_administrative_division">juso:first_level_administrative_division</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-si_gun_gu">Property: si_gun_gu</h3><div class="description"><p class="definition"><strong>Definition:</strong> The second-level administrative division of the address in South Korea, one of the six types of municipal-level divisions: cities (si), specific cities (teukjeongsi), administrative cities (haengjeongsi), county (gun), autonomous districts (jachigu), and non-autonomous districts (ilbangu).<span class="lang">@en</span><br/>대한민국 주소의 시군구급 행정 구역으로 시, 특정시, 행정시, 군, 자치구, 일반구 중 하나에 해당한다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/si_gun_gu</td></tr><tr><th>Preferred Label:</th><td>city, county, or district<span class="lang">@en</span> and 시/군/구<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td>(composite term, see schema)</td></tr><tr><th>Subproperty of:</th><td><a href="http://rdfs.co/juso/second_level_administrative_division">juso:second_level_administrative_division</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><div class="property"><h3 id="term-si_gun_gu_code">Property: si_gun_gu_code</h3><div class="description"><p class="definition"><strong>Definition:</strong> Each of cities (si), counties (gun), or districts (gu) is given a 5-number code.<span class="lang">@en</span><br/>시, 군, 구는 5자리 코드를 부여받는다.<span class="lang">@ko</span></p><table class="properties"><tbody><tr><th>URI:</th><td>http://rdfs.co/juso/kr/si_gun_gu_code</td></tr><tr><th>Preferred Label:</th><td>code for city, county, or district<span class="lang">@en</span> and 시군구 코드<span class="lang">@ko</span></td></tr><tr><th>Domain:</th><td>(composite term, see schema)</td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr><tr><th>See Also:</th><td><a href="https://ko.wikipedia.org/wiki/대한민국의_주소">https://ko.wikipedia.org/wiki/대한민국의_주소</a></td></tr><tr><th>Status:</th><td>Unstable</td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2015-10-02</span>
+              - first issued
+            </li></ul></div></div><h2 id="sec-examples">Example</h2><div class="example"><h3>LiST Inc.</h3>
+    <pre><code>_:YangyongBldg a juso.kr:Building ;
+  juso:name "Yangyong Building"@en , "양용빌딩"@ko ;
+  juso:geometry &lt;http://geohash.org/wydjrzg6ece9&gt; ;
+  juso.kr:administrative_building_number "1156011700101210017028596" .
+
+_:LiSTInc a juso:SpatialThing , foaf:Organization ;
+  juso:name "LiST Inc."@en , "주식회사 리스트"@ko ;
+  juso:within _:YangyongBldg ;
+  juso:historical_address [
+    a juso.kr:EastAsianAddress ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 당산동 121-17 양용빌딩 9층 150-040"@ko ,
+      "9th Floor, Yangyong Building, 121-17, Dangsan-dong, Yeongdeungpo-gu, Seoul, 150-040, South Korea"@en ;
+    juso:country &lt;http://sws.geonames.org/1835841/&gt; ;
+    juso.kr:si_do &lt;http://sws.geonames.org/1835847/&gt; ;
+    juso.kr:si_gun_gu &lt;http://sws.geonames.org/1832536/&gt; ;
+    juso.kr:eup_myeon_dong &lt;http://sws.geonames.org/8692617/&gt; ;
+    juso.kr:beonji "121" ;
+    juso.kr:ho "17" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso.kr:PostalCode1988 ;
+      rdf:value "150-040"
+    ]
+  ] ;
+  juso:address [
+    a juso.kr:RoadNameAddress ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 버드나루로19길 3 (당산동) 양용빌딩 9층 07229"@ko ,
+      "9th Floor, Yangyong Building, 3, Beodeunaru-ro 19-gil, Yeongdeungpo-gu, Seoul, 07229, South Korea"@en ;
+    juso:country &lt;http://sws.geonames.org/1835841/&gt; ;
+    juso.kr:si_do &lt;http://sws.geonames.org/1835847/&gt; ;
+    juso.kr:si_gun_gu &lt;http://sws.geonames.org/1832536/&gt; ;
+    juso.kr:eup_myeon_dong &lt;http://sws.geonames.org/8692617/&gt; ;
+    juso:thoroughfare [
+      a juso.kr:Road ;
+      juso:name "Beodeunaru-ro 19-gil"@en , "버드나루로19길"@ko ;
+      juso:parent &lt;http://sws.geonames.org/8692617/&gt;
+      juso.kr:road_name_number "4154419" ;
+      juso.kr:parent_road [
+        a juso.kr:Street ;
+        juso:name "Beodeunaru-ro"@en , "버드나루로"@ko ;
+        juso:parent &lt;http://sws.geonames.org/8692617/&gt;
+        juso.kr:road_name_number "3118010" ;
+      ]
+    ] ;
+    juso.kr:building_number "3" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso.kr:PostalCode2015 ;
+      rdf:value "07229"
+    ] ;
+    juso.kr:landform &lt;http://dbpedia.org/resource/Land_lot&gt; ;
+    juso.kr:floor &lt;http://dbpedia.org/resource/Storey&gt; ;
+    juso.kr:eup_myeon_dong_serial_number "1"
+  ] .
+
+&lt;http://sws.geonames.org/1832536/&gt; a juso.kr:AutonomousDistrict ;
+  juso.kr:si_gun_gu_code "11560" .
+
+&lt;http://sws.geonames.org/8692617/&gt; a juso.kr:LegalStatusNeighborhood ;
+  juso.kr:legal_status_neighborhood_code "1156011700" ;
+  juso.kr:eup_myeon_dong_code "117" .</code></pre>
+    </div><h2 id="sec-license">License</h2><div class="license"><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>.<p>
+      The following section is informational only, please refer to the
+      <a href="http://creativecommons.org/licenses/by/4.0/legalcode">original license</a>
+      for complete license terms.
+    </p><p>This license grants the following rights:</p><ul><li>making multiple
+		    copies
+    (<a href="http://creativecommons.org/ns#Reproduction">http://creativecommons.org/ns#Reproduction</a>)
+  </li><li>distribution, public
+		    display, and publicly performance
+    (<a href="http://creativecommons.org/ns#Distribution">http://creativecommons.org/ns#Distribution</a>)
+  </li><li>distribution of
+		    derivative works
+    (<a href="http://creativecommons.org/ns#DerivativeWorks">http://creativecommons.org/ns#DerivativeWorks</a>)
+  </li></ul><p>This license imposes the following restrictions:</p><ul><li>copyright and license
+		    notices be kept intact
+    (<a href="http://creativecommons.org/ns#Notice">http://creativecommons.org/ns#Notice</a>)
+  </li><li>credit be given to
+		    copyright holder and/or author
+    (<a href="http://creativecommons.org/ns#Attribution">http://creativecommons.org/ns#Attribution</a>)
+  </li></ul></p></div><div id="footer">
+      Documentation generated using the <a href="http://github.com/jgkim/rdfs-toolchain">rdfs.co toolchain</a><br/>
+      based on <a href="http://iandavis.com">Ian Davis</a>'s <a href="http://vocab.org/2004/03/toolchain">vocab.org toolchain</a>.
+    </div></body></html>
