@@ -96,7 +96,7 @@
 
       #footer { margin-top: 4em; font-size: 0.8em; font-style: italic; text-align: right; }
     </style></head><body><h1>South Korea Extension to Juso Ontology</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://rdfs.co/juso/kr/0.1">http://rdfs.co/juso/kr/0.1</a> [<a href="http://rdfs.co/juso/kr/0.1/html">HTML</a>] [<a href="http://rdfs.co/juso/kr/0.1/rdf">RDF/XML</a>] [<a href="http://rdfs.co/juso/kr/0.1/ttl">Turtle</a>]</dd><dt>Latest Version</dt><dd><a href="http://rdfs.co/juso/kr/">http://rdfs.co/juso/kr/</a></dd><dt>
-              Author</dt><dd><a href="http://jayg.org/">James G. Kim</a>, <a href="http://li-st.com/">LiST Inc.</a></dd></dl><p class="status">This vocabulary is <em>under development</em>.</p><p class="rights">Copyright © 2015 LiST Inc. Some Rights Reserved.</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-groups">Terms Grouped by Theme</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-examples">Example</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="description">
+              Author</dt><dd><a href="http://jayg.org/">James G. Kim</a>, <a href="http://li-st.com/">LiST Inc.</a></dd></dl><p class="status">This vocabulary is <em>under development</em>.</p><p class="rights">Copyright © 2015 LiST Inc. Some Rights Reserved.</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-changes">Changes From Previous Version</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-groups">Terms Grouped by Theme</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-examples">Example</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="description">
     South Korea Extension to Juso Ontology is a Web vocabulary that extends
     <a href="http://rdfs.co/juso/">Juso Ontology</a> to descrbe geographical
     addresses and features in South Korea.
@@ -109,7 +109,14 @@
     </p><p class="comment">
     Most of the descriptions given here are from Wikipedia or from the related
     ontologies and vocabularies.
-    </p><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://rdfs.co/juso/kr/</code></pre><p>
+    </p><h2 id="sec-changes">Changes From Previous Version</h2><ul><li><span class="date">2015-10-02</span>
+            - first issued
+          </li><li class="changeNote">2015-10-07
+        - editorial change by
+        <a href="http://jayg.org/">James G. Kim</a>, <a href="http://li-st.com/">LiST Inc.</a>:
+      
+      Fixed the wrong use of rdf:XMLLiteral
+      </li></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://rdfs.co/juso/kr/</code></pre><p>
           When used in XML documents the suggested prefix is
           <code>juso.kr</code>.
         </p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://rdfs.co/juso/kr/administrative_building_number

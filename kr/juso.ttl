@@ -53,7 +53,7 @@
       href="https://github.com/listinc/juso-ontology/tree/master/kr">the GitHub
       repository</a> so others can contribute edits and improvements.
     </div>
-    """^^rdf:XMLLiteral ;
+    """^^rdf:HTML ;
   rdfs:comment """
     Most of the descriptions given here are from Wikipedia or from the related
     ontologies and vocabularies.
@@ -69,10 +69,17 @@
   dcterms:type <http://purl.org/adms/assettype/Ontology> ;
   adms:status <http://purl.org/adms/status/UnderDevelopment> ;
   dcterms:issued "2015-10-02+09:00"^^xsd:date ;
-  dcterms:modified "2015-10-02+09:00"^^xsd:date ;
+  dcterms:modified "2015-10-07+09:00"^^xsd:date ;
   dcterms:identifier "http://rdfs.co/juso/kr/0.1" ;
   dcterms:isVersionOf <http://rdfs.co/juso/kr/> ;
   owl:versionInfo "0.1" ;
+  skos:changeNote [
+    rdf:value """
+      Fixed the wrong use of rdf:XMLLiteral
+      """@en ;
+    dcterms:date "2015-10-07+09:00"^^xsd:date ;
+    dcterms:creator <http://jayg.me/>
+  ] ;
   vann:example _:example1 ;
   dcterms:hasFormat
     <http://rdfs.co/juso/kr/0.1/html> ,
@@ -1243,4 +1250,4 @@ _:LiSTInc a juso:SpatialThing , foaf:Organization ;
 &lt;http://sws.geonames.org/8692617/&gt; a juso.kr:LegalStatusNeighborhood ;
   juso.kr:legal_status_neighborhood_code "1156011700" ;
   juso.kr:eup_myeon_dong_code "117" .</code></pre>
-    '''^^rdf:XMLLiteral .
+    '''^^rdf:HTML .

@@ -80,7 +80,7 @@
     <dcterms:identifier>http://rdfs.co/juso/0.1</dcterms:identifier>
     <dcterms:isVersionOf rdf:resource="http://rdfs.co/juso/"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-07+09:00</dcterms:modified>
     <dcterms:publisher rdf:resource="http://listinc.kr/id/listinc"/>
     <dcterms:rights>Copyright © 2015 LiST Inc. Some Rights Reserved.</dcterms:rights>
     <dcterms:title xml:lang="en">Juso Ontology</dcterms:title>
@@ -88,7 +88,7 @@
     <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
     <vann:example>
       <rdf:Description>
-        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">
+        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
     &lt;pre&gt;&lt;code&gt;_:YangyongBldg a juso:Feature ;
   juso:name "Yangyong Building"@en , "양용빌딩"@ko ;
   juso:geometry &amp;lt;http://geohash.org/wydjrzg6ece9&amp;gt; .
@@ -146,7 +146,7 @@ _:LiSTInc a juso:SpatialThing , foaf:Organization ;
     <rdf:type rdf:resource="http://creativecommons.org/ns#Work"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">
+    <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
     &lt;div&gt;
       The master version of this vocabulary is maintained in &lt;a
       href="https://github.com/listinc/juso-ontology"&gt;the GitHub repository&lt;/a&gt;
@@ -163,6 +163,15 @@ _:LiSTInc a juso:SpatialThing , foaf:Organization ;
     </rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://github.com/listinc/juso-ontology"/>
     <owl:versionInfo>0.1</owl:versionInfo>
+    <skos:changeNote>
+      <rdf:Description>
+        <dcterms:creator rdf:resource="http://jayg.me/"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-07+09:00</dcterms:date>
+        <rdf:value xml:lang="en">
+      Fixed the wrong use of rdf:XMLLiteral
+      </rdf:value>
+      </rdf:Description>
+    </skos:changeNote>
     <adms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
   </owl:Ontology>
   <rdf:Description rdf:about="http://rdfs.co/juso/0.1/html">
